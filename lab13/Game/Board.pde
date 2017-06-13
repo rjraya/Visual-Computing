@@ -43,7 +43,7 @@ class Board {
           zAngle = max((zAngle-rot.y)/2.0, -MAX_ANGLE);
         }
       }
-      zAngle=-zAngle;
+      //zAngle=-zAngle;
   }  
   
   void setSpeed(float s){

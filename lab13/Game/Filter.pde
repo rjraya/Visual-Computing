@@ -1,4 +1,4 @@
-PImage brightnessThreshold(PImage img, int threshold) {
+PImage binaryBrightnessThreshold(PImage img, int threshold) {
   PImage result = createImage(img.width, img.height, RGB);
   for (int i = 0; i < img.width * img.height; i++) {
     int p = img.pixels[i]; float b = brightness(p); 
@@ -19,6 +19,7 @@ PImage brightnessThreshold(PImage img, int threshold) {
   }
   return result;
 }*/
+
 PImage brightnessThreshold(PImage img, float min, float max) {
   PImage result = createImage(img.width, img.height, RGB);
   for (int i = 0; i < img.width * img.height; i++) {

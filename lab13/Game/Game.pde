@@ -1,4 +1,4 @@
-import processing.video.*; //<>// //<>// //<>// //<>// //<>// //<>//
+import processing.video.*; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 import gab.opencv.*;
 OpenCV opencv;
 private final float CYLINDER_RADIUS = 40; 
@@ -20,9 +20,11 @@ private final float BOX_THICK = 10;
 private final int DISPLAY_SCORE_HEIGHT = 160;
 private final int UPDATE_RATE = 5;
 private int MAX_ENTRIES, lastDrawn;
-private boolean changedScroll;;private Movie cam;
+private boolean changedScroll;
+private Movie cam;
 private TwoDThreeD projection;
 PImage img,imgToPrint;
+int notDetected = 0;
 
 
 void settings() {
@@ -41,29 +43,35 @@ void setup() {
 }
 
 PImage pipeline(PImage img){
-  PImage result = saturationThreshold(brightnessThreshold(hueThreshold(img, 96, 140), 38, 137), 116, 255);
+  PImage result = hueThreshold(img, 96, 140);
+  result = brightnessThreshold(result,38, 137);
+  result = saturationThreshold(result,116, 255);
   result = gaussianBlur(result);
-  result = brightnessThreshold(result, 0, 153);
+  result = gaussianBlur(result);
+  result = gaussianBlur(result);
+  result = gaussianBlur(result);
+  result = brightnessThreshold(result, 0, 153); 
   BlobDetection b = new BlobDetection(result);
   PImage blob = b.findConnectedComponents(true);
   result = scharr(blob);
   result = brightnessThreshold(result,20,255); 
   return result;
 }
-
+boolean play = true;
 void draw() {
+  
   if (cam.available() == true) {
     cam.read();
-  }
-  img = cam.get();
-  imgToPrint = cam.get();
+  } 
+
+  img = loadImage("board4.jpg");//cam.get();
+  imgToPrint = loadImage("board4.jpg");//cam.get();
   //set scene elements
   camera();
   background(255);
 
-  
   PImage edge = pipeline(img);
-  image(edge,0,0);
+
   HoughAlgorithm h = new HoughAlgorithm(edge);
   ArrayList<PVector> detectedEdges = h.hough(8);
   ArrayList<PVector> quadDetected = getQuad(detectedEdges,edge.width,edge.height);
@@ -85,13 +93,15 @@ void draw() {
     for(PVector i: quadCorners){
       i.z = 1.0; 
     }
-    PVector r = projection.get3DRotations((new QuadGraph()).sortCorners(quadCorners)); //<>//
+    PVector r = projection.get3DRotations((new QuadGraph()).sortCorners(quadCorners));
     println(r.x);
     println(r.y);
     println(r.z);
- //<>//
+
     System.out.println("rx = " + (int)Math.toDegrees(r.x) + ", ry = " + (int)Math.toDegrees(r.y) + ", rz = " + (int)Math.toDegrees(r.z) + "°");
-    board.smoothlyAdjustParameters(r);    //<>//
+    board.smoothlyAdjustParameters(r);   
+  } else {
+    notDetected++; 
   }
 
   imgToPrint.resize(400, 300);
@@ -110,6 +120,7 @@ void draw() {
     mover.checkCylinderCollision();
   }
   mover.display();
+  println(notDetected);
 }
 
 void mouseDragged() {
