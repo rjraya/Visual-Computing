@@ -29,10 +29,10 @@ class Board {
   } 
   
   void smoothlyAdjustParameters(PVector rot){
-    float smoothXAngle = rot.x;//(xAngle+rot.x)/2.0;
-    float smoothZAngle = rot.y;//(zAngle+rot.y)/2.0;
+    float smoothXAngle = ((rot.x - PI) + xAngle) / 2.0;
+    float smoothZAngle = (rot.z + zAngle) / 2.0;//(zAngle+rot.y)/2.0;
 
-    /*if(rot.x > xAngle){
+    if(rot.x > xAngle){
       xAngle = min(smoothXAngle, MAX_ANGLE);
     } else if(rot.x < xAngle){
       xAngle = max(smoothXAngle, -MAX_ANGLE);
@@ -42,9 +42,9 @@ class Board {
       zAngle = min(smoothZAngle, MAX_ANGLE);
     } else if(-rot.y < zAngle){
       zAngle = max(smoothZAngle, -MAX_ANGLE);
-    }*/
-    xAngle = rot.x - PI;
-    zAngle = rot.z;
+    }
+    //xAngle = rot.x - PI;
+    //zAngle = rot.z;
     
   }  
   
