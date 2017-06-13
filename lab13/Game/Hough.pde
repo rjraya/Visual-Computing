@@ -18,7 +18,7 @@ class HoughAlgorithm{
   int phiDim = (int) (Math.PI / discretizationStepsPhi);
   PImage edgeImg;
   int rDim;
-  int minVotes = 150;
+  int minVotes = 100;
   int neighbourhood = 10;
   
   HoughAlgorithm(PImage img){
@@ -58,6 +58,9 @@ class HoughAlgorithm{
       }
     }
     Collections.sort(bestCandidates, new HoughComparator(accumulator));
+    for(Integer i: bestCandidates){ 
+      println("minVotes was: "+ accumulator[i]);
+    }
     return bestCandidates;
   } 
 

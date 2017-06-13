@@ -7,30 +7,6 @@ void drawIntersections(ArrayList<PVector> intersections) {
   }
 }
 
-ArrayList<PVector> getQuad(ArrayList<PVector> lines, int imgWidth, int imgHeight) {
-  QuadGraph graph = new QuadGraph();
-  graph.build(lines, imgWidth, imgHeight);
-  graph.findCycles(false);
-  ArrayList<int[]> cycles = new ArrayList<int[]>(graph.cycles);
-  for (int[] cycle : cycles) {
-    PVector l1 = lines.get(cycle[0]);
-    PVector l2 = lines.get(cycle[1]);
-    PVector l3 = lines.get(cycle[2]);
-    PVector l4 = lines.get(cycle[3]);
-    PVector c12 = graph.intersection(l1, l2);
-    PVector c23 = graph.intersection(l2, l3);
-    PVector c34 = graph.intersection(l3, l4);
-    PVector c41 = graph.intersection(l4, l1);
-    if (graph.isConvex(c12, c23, c34, c41) &&
-        graph.validArea(c12, c23, c34, c41, imgWidth*imgHeight, (imgWidth*imgHeight)/100) != 0 && 
-        graph.nonFlatQuad(c12, c23, c34, c41)) {
-      return new ArrayList<PVector>(Arrays.asList(c12, c23, c34, c41, l1, l2, l3, l4));
-    }
-  }
-  return new ArrayList<PVector>();
-}
-
-
 void drawBorderLines(ArrayList<PVector> lines, int imgWidth) {
   for (PVector l : lines) {
     float r = l.x;

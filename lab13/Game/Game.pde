@@ -39,19 +39,36 @@ void setup() {
 }
 
 PImage pipeline(PImage img){
-  PImage result = hueThreshold(img, 96, 140);
-  result = brightnessThreshold(result,38, 137);
-  result = saturationThreshold(result,116, 255);
+  PImage result = hueThreshold(img, 83, 142);
+  result = brightnessThreshold(result,15, 189);
+  result = saturationThreshold(result,59, 255);
   result = gaussianBlur(result);
   result = gaussianBlur(result);
   result = gaussianBlur(result);
   result = gaussianBlur(result);
-  result = brightnessThreshold(result, 0, 153); 
-  image(result,400,0);
+  result = gaussianBlur(result);
+  result = gaussianBlur(result);
+  result = gaussianBlur(result);
+  result = gaussianBlur(result);
+  result = gaussianBlur(result);
+  result = gaussianBlur(result);
+  result = gaussianBlur(result);
+  result = gaussianBlur(result);
+  result = brightnessThreshold(result, 0, 153);
   BlobDetection b = new BlobDetection(result);
-  PImage blob = b.findConnectedComponents(true);
+  PImage blob = b.findConnectedComponents(true); 
   result = scharr(blob);
   result = brightnessThreshold(result,20,255); 
+  /*result = gaussianBlur(result);
+  result = gaussianBlur(result);
+  result = gaussianBlur(result);
+  result = gaussianBlur(result);
+  result = brightnessThreshold(result, 0, 153);
+  BlobDetection b2 = new BlobDetection(result);
+  PImage blob2 = b2.findConnectedComponents(true); 
+  result = scharr(result);
+  result = brightnessThreshold(result,20,255);*/
+  image(result,400,0);
   return result;
 }
 boolean play = true;
@@ -74,9 +91,12 @@ void draw() {
   
   PImage edge = pipeline(img);
   HoughAlgorithm h = new HoughAlgorithm(edge);
-  ArrayList<PVector> detectedEdges = h.hough(8);
-  ArrayList<PVector> quadDetected = getQuad(detectedEdges,edge.width,edge.height);
-
+  ArrayList<PVector> detectedEdges = h.hough(6);
+  QuadGraph graph = new QuadGraph();
+  List<PVector> l = detectedEdges;
+  ArrayList<PVector> quadDetected = 
+    new ArrayList(graph.findBestQuad(detectedEdges,edge.width,edge.height,100000,2000,false));
+  println(quadDetected.size());
   if (quadDetected.size() > 3) {
     ArrayList<PVector> quadCorners = new ArrayList<PVector>(Arrays.asList(quadDetected.get(0),quadDetected.get(1),quadDetected.get(2),quadDetected.get(3)));
     ArrayList<PVector> quadLines = new ArrayList<PVector>(Arrays.asList(quadDetected.get(4),quadDetected.get(5),quadDetected.get(6),quadDetected.get(7)));

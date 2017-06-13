@@ -29,6 +29,10 @@ class QuadGraph {
       quad.add(intersection(l3, l4));
       quad.add(intersection(l4, l1));
       quad = sortCorners(quad);
+      quad.add(l1);
+      quad.add(l2);
+      quad.add(l3);
+      quad.add(l4);
 
       PVector c1 = quad.get(0);
       PVector c2 = quad.get(1);
@@ -44,10 +48,14 @@ class QuadGraph {
         }
       }
     }
-    if (bestQuadArea>0)
+    if (bestQuadArea>0){
+      println("best quad area was: " + bestQuadArea);
       return bestQuad;
-    else
+    }else{
+      println("lines found were: " + lines.size());
+      println("cycles found were: " + cycles.size());
       return new ArrayList<PVector>();
+    }
   }  
 
 
