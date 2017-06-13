@@ -1,4 +1,4 @@
-import processing.video.*; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+import processing.video.*;  //<>// //<>// //<>// //<>//
 import gab.opencv.*;
 OpenCV opencv;
 private final float CYLINDER_RADIUS = 40; 
@@ -9,8 +9,6 @@ private Mover mover;
 private ArrayList<Cylinder> cylinderList;
 private PGraphics bgScore, topView, scoreBoard, barChart;
 private HScrollbar hs;
-private HScrollbar test; //TESTING PURPOSE
-private HScrollbar test2; //TESTING PURPOSE
 private BarChart bc;
 private ArrayList<Float> score;
 private final PVector GRAVITY = new PVector(0, 0.981, 0);
@@ -24,7 +22,6 @@ private int MAX_ENTRIES, lastDrawn;
 private boolean changedScroll;;private Movie cam;
 private TwoDThreeD projection;
 PImage img,imgToPrint;
-
 
 void settings() {
   //fullScreen();
@@ -50,14 +47,21 @@ PImage pipeline(PImage img){
   result = gaussianBlur(result);
   result = gaussianBlur(result);
   result = brightnessThreshold(result, 0, 153); 
+  image(result,400,0);
   BlobDetection b = new BlobDetection(result);
   PImage blob = b.findConnectedComponents(true);
   result = scharr(blob);
   result = brightnessThreshold(result,20,255); 
   return result;
 }
-
+boolean play = true;
 void draw() {
+  if(keyPressed == true && keyCode == UP){
+    play = false;
+  } else if(keyPressed == true && keyCode == DOWN) {
+    play = true;
+  }
+  if(play){
   camera();
   background(255);
   if (cam.available() == true) {
@@ -81,31 +85,28 @@ void draw() {
          quadCorners.get(2).x, quadCorners.get(2).y,
          quadCorners.get(3).x, quadCorners.get(3).y);
     drawBorderLines(quadLines, edge.width);
-    drawIntersections(quadCorners);
-    
+    drawIntersections(quadCorners);    
     for(PVector i: quadCorners){ i.z = 1.0; }
     PVector r = projection.get3DRotations((new QuadGraph()).sortCorners(quadCorners));
-    //r.x -= Math.PI;
     System.out.println("rx = " + (int)Math.toDegrees(r.x) + ", ry = " + (int)Math.toDegrees(r.y) + ", rz = " + (int)Math.toDegrees(r.z) + "°");
-    board.smoothlyAdjustParameters(r);  
-  }
-
+    board.smoothlyAdjustParameters(r);             
+    board.adjustParameters();    
+  } 
+  
   imgToPrint.resize(400, 300);
   image(imgToPrint, 0, 0);
-
   drawElements();
-  board.adjustParameters();
   translate(width/2, height/2, 0);
   board.display(isShiftClicked());
-  for (Cylinder c : cylinderList) {
-    c.display();
-  }
+  for (Cylinder c : cylinderList) { c.display(); }
   if (!isShiftClicked()) {
     mover.update();
     mover.checkEdges();
     mover.checkCylinderCollision();
   }
   mover.display();
+ 
+  }
 }
 
 void mouseDragged() {
@@ -171,10 +172,6 @@ void drawElements(){
   image(scoreBoard, DISPLAY_SCORE_HEIGHT - 10, height - topView.height - 10);
   hs.update();
   hs.display();
-  test.update();
-  test.display();
-  test2.update();
-  test2.display();
   bc.update();
   image(bc.graphic, 2 * DISPLAY_SCORE_HEIGHT + 30, height - topView.height - 10);
   directionalLight(50, 100, 125, 1, 1, 1);
@@ -194,8 +191,6 @@ void setupElements(){
   topView = createGraphics(DISPLAY_SCORE_HEIGHT - 20, DISPLAY_SCORE_HEIGHT - 20, P2D);
   scoreBoard = createGraphics(DISPLAY_SCORE_HEIGHT - 20, DISPLAY_SCORE_HEIGHT - 20, P2D);
   hs = new HScrollbar(2 * DISPLAY_SCORE_HEIGHT + 3 * 10, height - 35, width - 2 * DISPLAY_SCORE_HEIGHT - 2 * 20, 25);
-  test = new HScrollbar(0, 400, 400, 25); //TESTING PURPOSE
-  test2 = new HScrollbar(0, 450, 400, 25); //TESTING PURPOSE
   bc = new BarChart (width - 2 * DISPLAY_SCORE_HEIGHT - 2 * 20, DISPLAY_SCORE_HEIGHT - 55);
   MAX_ENTRIES = (width - 2 * DISPLAY_SCORE_HEIGHT - 2 * 20) / 2;
   changedScroll = true;
