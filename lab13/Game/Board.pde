@@ -24,26 +24,28 @@ class Board {
   //keeping inside the boundries
   void adjustParameters() {
     setSpeed(speed);
-    setAngleX(xAngle);
+    setAngleX(-xAngle);
     setAngleZ(zAngle);
   } 
   
   void smoothlyAdjustParameters(PVector rot){
-    if(xAngle <= MAX_ANGLE && xAngle >= -MAX_ANGLE){
-        if(rot.x > xAngle){
-          xAngle = min((xAngle+rot.x)/2.0, MAX_ANGLE);
-        } else if(rot.x < xAngle){
-          xAngle = max((xAngle+rot.x)/2.0, -MAX_ANGLE);
-        }
-      }
-      if(zAngle <= MAX_ANGLE && zAngle >= -MAX_ANGLE){
-        if(-rot.y > zAngle){
-          zAngle = min((zAngle-rot.y)/2.0, MAX_ANGLE);
-        } else if(-rot.y < zAngle){
-          zAngle = max((zAngle-rot.y)/2.0, -MAX_ANGLE);
-        }
-      }
-      //zAngle=-zAngle;
+    float smoothXAngle = rot.x;//(xAngle+rot.x)/2.0;
+    float smoothZAngle = rot.y;//(zAngle+rot.y)/2.0;
+
+    /*if(rot.x > xAngle){
+      xAngle = min(smoothXAngle, MAX_ANGLE);
+    } else if(rot.x < xAngle){
+      xAngle = max(smoothXAngle, -MAX_ANGLE);
+    }
+
+    if(-rot.y > zAngle){
+      zAngle = min(smoothZAngle, MAX_ANGLE);
+    } else if(-rot.y < zAngle){
+      zAngle = max(smoothZAngle, -MAX_ANGLE);
+    }*/
+    xAngle = rot.x - PI;
+    zAngle = rot.z;
+    
   }  
   
   void setSpeed(float s){

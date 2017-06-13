@@ -1,4 +1,4 @@
-import processing.video.*; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
+import processing.video.*; //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>// //<>//
 import gab.opencv.*;
 OpenCV opencv;
 private final float CYLINDER_RADIUS = 40; 
@@ -10,6 +10,7 @@ private ArrayList<Cylinder> cylinderList;
 private PGraphics bgScore, topView, scoreBoard, barChart;
 private HScrollbar hs;
 private HScrollbar test; //TESTING PURPOSE
+private HScrollbar test2; //TESTING PURPOSE
 private BarChart bc;
 private ArrayList<Float> score;
 private final PVector GRAVITY = new PVector(0, 0.981, 0);
@@ -20,11 +21,9 @@ private final float BOX_THICK = 10;
 private final int DISPLAY_SCORE_HEIGHT = 160;
 private final int UPDATE_RATE = 5;
 private int MAX_ENTRIES, lastDrawn;
-private boolean changedScroll;
-private Movie cam;
+private boolean changedScroll;;private Movie cam;
 private TwoDThreeD projection;
 PImage img,imgToPrint;
-int notDetected = 0;
 
 
 void settings() {
@@ -57,21 +56,19 @@ PImage pipeline(PImage img){
   result = brightnessThreshold(result,20,255); 
   return result;
 }
-boolean play = true;
-void draw() {
-  
-  if (cam.available() == true) {
-    cam.read();
-  } 
 
-  img = loadImage("board4.jpg");//cam.get();
-  imgToPrint = loadImage("board4.jpg");//cam.get();
-  //set scene elements
+void draw() {
   camera();
   background(255);
-
+  if (cam.available() == true) {
+    cam.read();
+  }
+  img = cam.get();
+  imgToPrint = cam.get();
+  /*img = loadImage("board2.jpg");
+  imgToPrint = loadImage("board2.jpg");*/
+  
   PImage edge = pipeline(img);
-
   HoughAlgorithm h = new HoughAlgorithm(edge);
   ArrayList<PVector> detectedEdges = h.hough(8);
   ArrayList<PVector> quadDetected = getQuad(detectedEdges,edge.width,edge.height);
@@ -83,25 +80,14 @@ void draw() {
          quadCorners.get(1).x, quadCorners.get(1).y,
          quadCorners.get(2).x, quadCorners.get(2).y,
          quadCorners.get(3).x, quadCorners.get(3).y);
-    println(quadCorners.get(0));
-    println(quadCorners.get(1));
-    println(quadCorners.get(2));
-    println(quadCorners.get(3));
     drawBorderLines(quadLines, edge.width);
     drawIntersections(quadCorners);
     
-    for(PVector i: quadCorners){
-      i.z = 1.0; 
-    }
+    for(PVector i: quadCorners){ i.z = 1.0; }
     PVector r = projection.get3DRotations((new QuadGraph()).sortCorners(quadCorners));
-    println(r.x);
-    println(r.y);
-    println(r.z);
-
+    //r.x -= Math.PI;
     System.out.println("rx = " + (int)Math.toDegrees(r.x) + ", ry = " + (int)Math.toDegrees(r.y) + ", rz = " + (int)Math.toDegrees(r.z) + "°");
-    board.smoothlyAdjustParameters(r);   
-  } else {
-    notDetected++; 
+    board.smoothlyAdjustParameters(r);  
   }
 
   imgToPrint.resize(400, 300);
@@ -120,7 +106,6 @@ void draw() {
     mover.checkCylinderCollision();
   }
   mover.display();
-  println(notDetected);
 }
 
 void mouseDragged() {
@@ -188,6 +173,8 @@ void drawElements(){
   hs.display();
   test.update();
   test.display();
+  test2.update();
+  test2.display();
   bc.update();
   image(bc.graphic, 2 * DISPLAY_SCORE_HEIGHT + 30, height - topView.height - 10);
   directionalLight(50, 100, 125, 1, 1, 1);
@@ -208,6 +195,7 @@ void setupElements(){
   scoreBoard = createGraphics(DISPLAY_SCORE_HEIGHT - 20, DISPLAY_SCORE_HEIGHT - 20, P2D);
   hs = new HScrollbar(2 * DISPLAY_SCORE_HEIGHT + 3 * 10, height - 35, width - 2 * DISPLAY_SCORE_HEIGHT - 2 * 20, 25);
   test = new HScrollbar(0, 400, 400, 25); //TESTING PURPOSE
+  test2 = new HScrollbar(0, 450, 400, 25); //TESTING PURPOSE
   bc = new BarChart (width - 2 * DISPLAY_SCORE_HEIGHT - 2 * 20, DISPLAY_SCORE_HEIGHT - 55);
   MAX_ENTRIES = (width - 2 * DISPLAY_SCORE_HEIGHT - 2 * 20) / 2;
   changedScroll = true;
