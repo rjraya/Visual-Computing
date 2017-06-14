@@ -1,4 +1,9 @@
-class Mover { //<>// //<>// //<>// //<>//
+private final float BALL_RADIUS = 20; //<>//
+
+class Mover { 
+  private final PVector GRAVITY = new PVector(0, 0.981, 0);
+  private final float BALL_BOUNCINESS = 0.7;
+  private final int UPDATE_RATE = 5;
   private PVector location;
   private PVector velocity;
   private PVector gravityForce; // Gravity vector.

@@ -1,4 +1,8 @@
+private final float CYLINDER_RADIUS = 40; 
+
 class Cylinder {
+  private final float CYLINDER_HEIGHT = 50; 
+  private final int CYLINDER_RESOLUTION = 40;
   private PVector location; // Coordinate vector of cylinder.
   private PShape openCylinder = new PShape(); // The empty shell cylinder.
   private PShape topClosed = new PShape(); // The top circle of the cylinder.
@@ -7,7 +11,7 @@ class Cylinder {
   private float angle; // Use to create the cylinder.
   private float[] x = new float[CYLINDER_RESOLUTION + 1]; // Use to create the cylinder.
   private float[] z = new float[CYLINDER_RESOLUTION + 1]; // Use to create the cylinder.
-
+  
   Cylinder(float posX, float posY, float posZ) {
     noStroke();
     fill(128, 128,128);

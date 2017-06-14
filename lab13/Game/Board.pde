@@ -1,12 +1,16 @@
 private final float MAX_ANGLE = PI/3.0;
-private final float MIN_SPEED = 0.2;
-private final float MAX_SPEED = 1.5;
+private final float BOX_SIDE = 500;
+private final float BOX_THICK = 10;
 
 class Board {
-  private float speed, xAngle, zAngle;
+
+  private final float MIN_SPEED = 0.2;
+  private final float MAX_SPEED = 1.5;
+  private float speed, xAngle, zAngle, yAngle;
   Board() {
     xAngle = 0.0;
     zAngle = 0.0;
+    yAngle = 0.0;
     speed = 1;
   }
   void display(boolean isShiftClicked) {
@@ -17,6 +21,7 @@ class Board {
     } else {
       rotateX(-xAngle);
       rotateZ(zAngle);
+      //rotateY(yAngle);
     }
     box(BOX_SIDE, BOX_THICK, BOX_SIDE);
   }
@@ -29,23 +34,14 @@ class Board {
   } 
   
   void smoothlyAdjustParameters(PVector rot){
-    float smoothXAngle = ((rot.x - PI) + xAngle) / 2.0;
-    float smoothZAngle = (rot.z + zAngle) / 2.0;//(zAngle+rot.y)/2.0;
-    xAngle = smoothXAngle;
-    zAngle = smoothZAngle;
-    /*if(rot.x > xAngle){
-      xAngle = min(smoothXAngle, MAX_ANGLE);
-    } else if(rot.x < xAngle){
-      xAngle = max(smoothXAngle, -MAX_ANGLE);
-    }
+    float smoothXAngle = rot.x - PI;
+    float smoothZAngle = rot.z;
+    float smoothYAngle = rot.y;
+    setAngleY(smoothYAngle*speed);
+    setAngleX(-smoothXAngle*speed);
+    setAngleZ(smoothZAngle*speed);
 
-    if(-rot.z > zAngle){
-      zAngle = min(smoothZAngle, MAX_ANGLE);
-    } else if(-rot.z < zAngle){
-      zAngle = max(smoothZAngle, -MAX_ANGLE);
-    }*/
- 
-    
+    System.out.println("bx = " + (int)Math.toDegrees(xAngle) + ", by = " + (int)Math.toDegrees(yAngle) + ", bz = " + (int)Math.toDegrees(zAngle) + "°");   
   }  
   
   void setSpeed(float s){
@@ -54,6 +50,10 @@ class Board {
   
   void setAngleX(float x) {
     xAngle = Math.max(Math.min(x, MAX_ANGLE), -1*MAX_ANGLE);
+  }
+  
+  void setAngleY(float y) {
+    yAngle = Math.max(Math.min(y, MAX_ANGLE), -1*MAX_ANGLE);
   }
   
   void setAngleZ(float z) {

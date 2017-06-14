@@ -49,11 +49,10 @@ class QuadGraph {
       }
     }
     if (bestQuadArea>0){
-      println("best quad area was: " + bestQuadArea);
       return bestQuad;
     }else{
-      println("lines found were: " + lines.size());
-      println("cycles found were: " + cycles.size());
+      // drawBorderLines(new ArrayList(lines),width);
+      //play = false;
       return new ArrayList<PVector>();
     }
   }  

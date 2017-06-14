@@ -13,21 +13,31 @@ class HoughComparator implements java.util.Comparator<Integer> {
 }
 
 class HoughAlgorithm{
-  float discretizationStepsPhi = 0.005f;
-  float discretizationStepsR = 2.5f;
-  int phiDim = (int) (Math.PI / discretizationStepsPhi);
-  PImage edgeImg;
-  int rDim;
-  int minVotes = 100;
-  int neighbourhood = 10;
+  int phiDim, rDim, maxVotes, minVotes, neighbourhood, nLines;
+  float discretizationStepsPhi, discretizationStepsR;
+  PImage edgeImg; 
   
-  HoughAlgorithm(PImage img){
+  HoughAlgorithm(PImage img, int nLines){
+    discretizationStepsPhi = 0.005f;
+    discretizationStepsR = 2.5f;
+    phiDim = (int) (Math.PI / discretizationStepsPhi);
+    minVotes = 100;
+    neighbourhood = 10;
+    this.nLines = nLines;
+    maxVotes = 0;
     rDim = (int) ((sqrt(img.width*img.width + img.height*img.height) * 2) / discretizationStepsR +1);
     edgeImg = img;
   }  
   
-  ArrayList<PVector> hough(int nLines) {  
+  ArrayList<PVector> hough() {  
     int[] accumulator = getHoughAccumulator();
+    for(int i: accumulator){ 
+      if(i > maxVotes){ 
+        maxVotes = i; 
+      }
+    }
+    minVotes = (int) (0.21 * maxVotes +  0.3 * nLines);
+    neighbourhood = (int) (0.4 * minVotes);
     ArrayList<Integer> bestCandidates  = getBestCandidates(rDim, phiDim, accumulator);
     ArrayList<PVector> linesAsVectorArray = getLines(bestCandidates, rDim, nLines);
     return linesAsVectorArray;
@@ -58,9 +68,6 @@ class HoughAlgorithm{
       }
     }
     Collections.sort(bestCandidates, new HoughComparator(accumulator));
-    for(Integer i: bestCandidates){ 
-      println("minVotes was: "+ accumulator[i]);
-    }
     return bestCandidates;
   } 
 

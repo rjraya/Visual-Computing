@@ -1,25 +1,18 @@
-import processing.video.*;  //<>// //<>// //<>// //<>//
+import processing.video.*;   //<>//
 import gab.opencv.*;
 OpenCV opencv;
-private final float CYLINDER_RADIUS = 40; 
-private final float CYLINDER_HEIGHT = 50; 
-private final int CYLINDER_RESOLUTION = 40;
+
 private Board board;
 private Mover mover;
 private ArrayList<Cylinder> cylinderList;
-private PGraphics bgScore, topView, scoreBoard, barChart;
+private PGraphics bgScore, topView, scoreBoard;
 private HScrollbar hs;
 private BarChart bc;
 private ArrayList<Float> score;
-private final PVector GRAVITY = new PVector(0, 0.981, 0);
-private final float BALL_RADIUS = 20;
-private final float BALL_BOUNCINESS = 0.7;
-private final float BOX_SIDE = 500;
-private final float BOX_THICK = 10;
 private final int DISPLAY_SCORE_HEIGHT = 160;
-private final int UPDATE_RATE = 5;
 private int MAX_ENTRIES, lastDrawn;
-private boolean changedScroll;;private Movie cam;
+private boolean changedScroll;
+private Movie cam;
 private TwoDThreeD projection;
 PImage img,imgToPrint;
 
@@ -35,87 +28,51 @@ void setup() {
   noStroke();
   lights();
   setupElements();
-  projection = new TwoDThreeD(800, 600, 0);
+  projection = new TwoDThreeD(cam.width, cam.height, 0);
 }
 
 PImage pipeline(PImage img){
-  PImage result = hueThreshold(img, 83, 142);
-  result = brightnessThreshold(result,15, 189);
+  PImage result = hueThreshold(img, 83, 142);  
+  result = brightnessThreshold(result,10, 189);
   result = saturationThreshold(result,59, 255);
   result = gaussianBlur(result);
   result = gaussianBlur(result);
-  result = gaussianBlur(result);
-  result = gaussianBlur(result);
-  result = gaussianBlur(result);
-  result = gaussianBlur(result);
-  result = gaussianBlur(result);
-  result = gaussianBlur(result);
-  result = gaussianBlur(result);
-  result = gaussianBlur(result);
-  result = gaussianBlur(result);
-  result = gaussianBlur(result);
-  result = brightnessThreshold(result, 0, 153);
+  result = brightnessThreshold(result, 20, 200);
   BlobDetection b = new BlobDetection(result);
   PImage blob = b.findConnectedComponents(true); 
   result = scharr(blob);
   result = brightnessThreshold(result,20,255); 
-  /*result = gaussianBlur(result);
-  result = gaussianBlur(result);
-  result = gaussianBlur(result);
-  result = gaussianBlur(result);
-  result = brightnessThreshold(result, 0, 153);
-  BlobDetection b2 = new BlobDetection(result);
-  PImage blob2 = b2.findConnectedComponents(true); 
-  result = scharr(result);
-  result = brightnessThreshold(result,20,255);*/
-  image(result,400,0);
+  
   return result;
 }
-boolean play = true;
-void draw() {
-  if(keyPressed == true && keyCode == UP){
-    play = false;
-  } else if(keyPressed == true && keyCode == DOWN) {
-    play = true;
-  }
-  if(play){
-  camera();
-  background(255);
-  if (cam.available() == true) {
-    cam.read();
-  }
-  img = cam.get();
-  imgToPrint = cam.get();
-  /*img = loadImage("board2.jpg");
-  imgToPrint = loadImage("board2.jpg");*/
-  
+
+void videoMode(){
   PImage edge = pipeline(img);
-  HoughAlgorithm h = new HoughAlgorithm(edge);
-  ArrayList<PVector> detectedEdges = h.hough(6);
+  HoughAlgorithm h = new HoughAlgorithm(edge,7);
+  ArrayList<PVector> detectedEdges = h.hough();
   QuadGraph graph = new QuadGraph();
-  List<PVector> l = detectedEdges;
   ArrayList<PVector> quadDetected = 
-    new ArrayList(graph.findBestQuad(detectedEdges,edge.width,edge.height,100000,2000,false));
-  println(quadDetected.size());
+    new ArrayList(graph.findBestQuad(detectedEdges,edge.width,edge.height,100000,1000,false));
   if (quadDetected.size() > 3) {
     ArrayList<PVector> quadCorners = new ArrayList<PVector>(Arrays.asList(quadDetected.get(0),quadDetected.get(1),quadDetected.get(2),quadDetected.get(3)));
-    ArrayList<PVector> quadLines = new ArrayList<PVector>(Arrays.asList(quadDetected.get(4),quadDetected.get(5),quadDetected.get(6),quadDetected.get(7)));
+    //ArrayList<PVector> quadLines = new ArrayList<PVector>(Arrays.asList(quadDetected.get(4),quadDetected.get(5),quadDetected.get(6),quadDetected.get(7)));
     quad(quadCorners.get(0).x, quadCorners.get(0).y,
          quadCorners.get(1).x, quadCorners.get(1).y,
          quadCorners.get(2).x, quadCorners.get(2).y,
          quadCorners.get(3).x, quadCorners.get(3).y);
-    drawBorderLines(quadLines, edge.width);
-    drawIntersections(quadCorners);    
+    //drawBorderLines(quadLines, edge.width);
+    //drawIntersections(quadCorners);    
     for(PVector i: quadCorners){ i.z = 1.0; }
     PVector r = projection.get3DRotations((new QuadGraph()).sortCorners(quadCorners));
     System.out.println("rx = " + (int)Math.toDegrees(r.x) + ", ry = " + (int)Math.toDegrees(r.y) + ", rz = " + (int)Math.toDegrees(r.z) + "°");
     board.smoothlyAdjustParameters(r);             
-    board.adjustParameters();    
   } 
   
-  imgToPrint.resize(400, 300);
-  image(imgToPrint, 0, 0);
-  drawElements();
+  
+}
+
+
+void drawGameElements(){
   translate(width/2, height/2, 0);
   board.display(isShiftClicked());
   for (Cylinder c : cylinderList) { c.display(); }
@@ -125,8 +82,38 @@ void draw() {
     mover.checkCylinderCollision();
   }
   mover.display();
+}
+
+void draw() {
+  camera();
+  background(255);
+  text("Press the UP key for the manual mode, DOWN to exit", 400, 10); 
  
+  if (cam.available() == true && !isShiftClicked() && !manualMode()) {
+    cam.read();
   }
+  img = cam.get();
+  imgToPrint = cam.get();    
+  if(!isShiftClicked() && !manualMode()){
+    videoMode();
+  } 
+  imgToPrint.resize(300, 200);
+  image(imgToPrint, 0, 0);
+  drawElements();
+  drawGameElements();
+ 
+}
+
+boolean manualModeSet = false;
+boolean manualMode(){
+  if(manualModeSet){
+    manualModeSet = !(keyPressed == true && keyCode == DOWN);
+    return manualModeSet; 
+  } else {
+    manualModeSet = keyPressed == true && keyCode == UP;
+    return manualModeSet;
+  }  
+  
 }
 
 void mouseDragged() {
