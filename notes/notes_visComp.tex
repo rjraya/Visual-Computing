@@ -1,0 +1,79 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{amsmath}
+\usepackage{listings}
+%package to fix images where they are defined with option H
+\usepackage{float}
+
+% Paquetes para matemáticas:
+\usepackage{amsmath, amsthm, amssymb, amsfonts, amscd} % Teoremas, fuentes y símbolos.
+\usepackage{tikz-cd} % para diagramas conmutativos
+% for writing inference rules
+\usepackage{proof}
+% for quotes
+\usepackage[autostyle]{csquotes}  
+ % Nuevo estilo para definiciones
+ \newtheoremstyle{definition-style} % Nombre del estilo
+ {5pt}                % Espacio por encima
+ {0pt}                % Espacio por debajo
+ {}                   % Fuente del cuerpo
+ {}                   % Identación: vacío= sin identación, \parindent = identación del parráfo
+ {\bf}                % Fuente para la cabecera
+ {.}                  % Puntuación tras la cabecera
+ {\newline}               % Espacio tras la cabecera: { } = espacio usal entre palabras, \newline = nueva línea
+ {}                   % Especificación de la cabecera (si se deja vaía implica 'normal')
+
+ % Nuevo estilo para teoremas
+ \newtheoremstyle{theorem-style} % Nombre del estilo
+ {5pt}                % Espacio por encima
+ {0pt}                % Espacio por debajo
+ {\itshape}           % Fuente del cuerpo
+ {}                   % Identación: vacío= sin identación, \parindent = identación del parráfo
+ {\bf}                % Fuente para la cabecera
+ {.}                  % Puntuación tras la cabecera
+ {\newline}               % Espacio tras la cabecera: { } = espacio usal entre palabras, \newline = nueva línea
+ {}                   % Especificación de la cabecera (si se deja vaía implica 'normal')
+
+ % Nuevo estilo para ejemplos y ejercicios
+ \newtheoremstyle{example-style} % Nombre del estilo
+ {5pt}                % Espacio por encima
+ {0pt}                % Espacio por debajo
+ {}                   % Fuente del cuerpo
+ {}                   % Identación: vacío= sin identación, \parindent = identación del parráfo
+ {\scshape}                % Fuente para la cabecera
+ {:}                  % Puntuación tras la cabecera
+ {.5em}               % Espacio tras la cabecera: { } = espacio usal entre palabras, \newline = nueva línea
+ {}                   % Especificación de la cabecera (si se deja vaía implica 'normal')
+
+ % Teoremas:
+ \theoremstyle{theorem-style}  % Otras posibilidades: plain (por defecto), definition, remark
+ \newtheorem{theorem}{Theorem}[section]  
+ \newtheorem{lemma}{Lemma}[section]
+ \newtheorem{corollary}{Corollary}[section]  
+ \newtheorem{exercise}{Exercise}[section]  
+
+ % Definiciones, notas, conjeturas
+ \theoremstyle{definition-style}
+ \newtheorem{definition}{Definition}[section]
+  
+\usepackage[]{algorithm2e}  
+\usepackage{algorithmic}
+\usepackage{url}
+
+\lstdefinestyle{freefempp}{
+  language=C++,
+  basicstyle=\footnotesize\ttfamily,
+  commentstyle=\itshape\color{violet},
+  identifierstyle=\color{blue},
+  morekeywords={ border, buildmesh, cos, dx, dy, fespace, fill, func,
+    int2d, label, mesh, on, pi, plot, problem, sin, real, x, y},
+  % float,
+  frame=single,
+  numbers=left
+}
+\lstset{style=freefempp}
+\begin{document}
+\section{Interaction paradigms}
+\input{styles/styles}
+
+\end{document}
