@@ -77,6 +77,10 @@ Augmented reality (AR) , is a live direct or indirect view of a physical, real-w
 
 There are several hardware instruments that can be used to this goal. Using transparencies such as glasses or projections. We can even have interactive surfaces where we should ask ourselves whether is better to project from the upside or from the downside. A special characteristic of this surfaces is whether they are multi-touch or not. Multi-touch means that we can recognize the presence of more than one or more than two points of contact with the surface
 
+\subsection{Difference between virtual reality and augmented reality}
+
+Virtual reality offers a digital recreation of a real life setting, while augmented reality delivers virtual elements as an overlay to the real world. 
+
 \subsection{Voice command devices}
 
 These are interfaces that allow the user to communicate using its voice with the computer. A popular system for this is Siri. However, there is still a lot to do in human voice recognition to generalize these tools.  The level of precision depends on factors like the size of the vocabulary of the user, the environmental noise, the time that a particular user has been using it since Siri claims that it can learn with time or certain others semantic problems. There are also certain challenges in its usability.
@@ -137,10 +141,9 @@ Suppose a website for reserving plane tickets. Classify the following knowledges
 A software program for 3D rendering offers multiple functionalities to architects. What interaction paradigm is the most appropiate for the listed tasks. (It is possible to have several).
 \end{exercise}
 \begin{itemize}
-\item If a user waits very long before confirming his choice the session is stopped and he has to restart all the process. (related to the computer translation)
-\item A user has to enter the departure and arrival airports that are in the scope of the company's flights. (related to the computer translation)
-\item Each airport of the world has a code name in three letters. For instance, GVA for Geneva. (related to the task)
-\item In Swiss.com if the user wants to reserve a ticket in business class, he has to click on "more options" in the first dialogue window. (related to syntax)
-\item I can order the possible flights in terms of the number of layovers or the price. (related to the computer translation)
+\item Position a numeric image of the furniture and the equipment in the interior of the future kitchen. (direct manipulation)
+\item position a numeric image of the future house on a real image of the ground to understand ints integration in the landscape. (augmented reality)
+\item Make the the listing of the required windows for each room of the house. (form filling)
+\item Propose to the clients an immersive visit in their future house. (virtual reality)
 \end{itemize}
 
