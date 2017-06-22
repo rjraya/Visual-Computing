@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.17)  18 JUN 2017 02:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.17)  22 JUN 2017 18:42
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
-**notes_visComp.tex
-(./notes_visComp.tex
+**notes.tex
+(./notes.tex
 LaTeX2e <2011/06/27>
 Babel <3.9h> and hyphenation patterns for 78 languages loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -549,6 +549,37 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2013/12/03 3.9h The Babel package
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel-french/frenchb.ldf
+Language: frenchb 2013/12/30 v2.6g French support from the babel system
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2013/12/03 3.9h Babel common definitions
+\babel@savecnt=\count149
+\U@D=\dimen189
+)
+\FB@interchartokenstateORI=\count150
+Package babel Info: Making : an active character on input line 244.
+Package babel Info: Making ; an active character on input line 245.
+Package babel Info: Making ! an active character on input line 246.
+Package babel Info: Making ? an active character on input line 247.
+\FB@Mht=\dimen190
+\std@mcc=\count151
+\dec@mcc=\count152
+\listindentFB=\skip67
+\labelwidthFB=\skip68
+\leftmarginFB=\skip69
+\parindentFFN=\dimen191
+)
+(/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2012/08/20 v3.3p English support from the babel system
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+))
+(/usr/share/texlive/texmf-dist/tex/latex/carlisle/scalefnt.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
@@ -559,14 +590,9 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 )
 Package csquotes Info: Checking for multilingual support...
-Package csquotes Info: ... none found.
-
-
-Package csquotes Warning: No multilingual support.
-(csquotes)                Cannot enable multilingual quotes on input line 75.
-
-(./notes_visComp.aux)
-\openout1 = `notes_visComp.aux'.
+Package csquotes Info: ... found 'babel' package.
+ (./notes.aux)
+\openout1 = `notes.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
 LaTeX Font Info:    ... okay on input line 75.
@@ -580,20 +606,21 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
 LaTeX Font Info:    ... okay on input line 75.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
 LaTeX Font Info:    ... okay on input line 75.
-\c@lstlisting=\count149
- ABD: EveryShipout initializing macros
+\c@lstlisting=\count153
+
+ABD: EveryShipout initializing macros
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count150
-\scratchdimen=\dimen189
+\scratchcounter=\count154
+\scratchdimen=\dimen192
 \scratchbox=\box53
-\nofMPsegments=\count151
-\nofMParguments=\count152
+\nofMPsegments=\count155
+\nofMParguments=\count156
 \everyMPshowfont=\toks40
-\MPscratchCnt=\count153
-\MPscratchDim=\dimen190
-\MPnumerator=\count154
-\makeMPintoPDFobject=\count155
+\MPscratchCnt=\count157
+\MPscratchDim=\dimen193
+\MPnumerator=\count158
+\makeMPintoPDFobject=\count159
 \everyMPtoPDFconversion=\toks41
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -643,21 +670,33 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-(./notes_visComp.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 2.
+LaTeX Info: Redefining \degres on input line 75.
+LaTeX Info: Redefining \dots on input line 75.
+LaTeX Info: Redefining \up on input line 75.
+
+
+Package frenchb.ldf Warning: OT1 encoding should not be used for French. 
+(frenchb.ldf)                Add \usepackage[T1]{fontenc} to the preamble
+(frenchb.ldf)                of your document, on input line 75.
+
+(./notes.toc
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 2.
+LaTeX Font Info:    Try loading font information for U+msb on input line 3.
+
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no “ in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
 )
 \tf@toc=\write4
-\openout4 = `notes_visComp.toc'.
+\openout4 = `notes.toc'.
 
 
 (./styles/styles.tex
@@ -678,35 +717,34 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no © in font cmr10!
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no © in font cmr10!
  [5]
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no © in font cmr10!
 Missing character: There is no â in font cmbx12!
 Missing character: There is no € in font cmbx12!
 Missing character: There is no “ in font cmbx12!
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ­ in font cmr10!
 
-[6] [7]) (./graphics/intro.tex [8]
-<./images/raster.png, id=37, 622.325pt x 301.125pt>
+[6] [7]) (./graphics/intro.tex [8] [9]
+<./images/raster.png, id=40, 622.325pt x 301.125pt>
 File: ./images/raster.png Graphic file (type png)
  <use ./images/raster.png>
 Package pdftex.def Info: ./images/raster.png used on input line 50.
 (pdftex.def)             Requested size: 466.7426pt x 225.84319pt.
-
-[9]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- <./images/painter.png, id=41, 722.7pt x 313.17pt>
-File: ./images/painter.png Graphic file (type png)
 
-<use ./images/painter.png>
+<./images/painter.png, id=41, 722.7pt x 313.17pt>
+File: ./images/painter.png Graphic file (type png)
+ <use ./images/painter.png>
 Package pdftex.def Info: ./images/painter.png used on input line 65.
 (pdftex.def)             Requested size: 542.02367pt x 234.8769pt.
- [10 <./images/raster.png>]
+
+[10 <./images/raster.png>]
 <./images/raytrace.png, id=45, 773.89125pt x 324.21124pt>
 File: ./images/raytrace.png Graphic file (type png)
 
@@ -728,40 +766,154 @@ Overfull \hbox (19.28926pt too wide) in paragraph at lines 107--108
 
 
 Overfull \hbox (93.60391pt too wide) in paragraph at lines 115--116
-[]\OT1/cmr/m/n/10.95 We have to mul-ti-ply ma-tri-ces $((0\OML/cmm/m/it/10.95 ;
- \OMS/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/
-10.95 0)\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 (1\OML/cmm/m/it/10.95 ; \OT1/c
-mr/m/n/10.95 0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0)\OML/cmm/m/it/10.95 ; 
-\OT1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10
-.95 ; \OT1/cmr/m/n/10.95 1))$ and $((0\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95
- ^^@\OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1)\OML/cmm/m/i
-t/10.95 ; \OT1/cmr/m/n/10.95 (1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0\OML/c
-mm/m/it/10.95 ; \OT1/cmr/m/n/10.95 2)\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 (
-0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/1
-0.95 1))$. 
+[]\OT1/cmr/m/n/10.95 We have to mul-tiply matrices $((0\OML/cmm/m/it/10.95 ; \O
+MS/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.
+95 0)\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 (1\OML/cmm/m/it/10.95 ; \OT1/cmr/
+m/n/10.95 0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0)\OML/cmm/m/it/10.95 ; \OT
+1/cmr/m/n/10.95 (0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95
+ ; \OT1/cmr/m/n/10.95 1))$ and $((0\OML/cmm/m/it/10.95 ; \OMS/cmsy/m/n/10.95 ^^
+@\OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 1)\OML/cmm/m/it/1
+0.95 ; \OT1/cmr/m/n/10.95 (1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0\OML/cmm/
+m/it/10.95 ; \OT1/cmr/m/n/10.95 2)\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 (0\O
+ML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.9
+5 1))$. 
  []
 
-) [13] (./notes_visComp.aux) ) 
+) (./vision/vision.tex [13]
+<./images/triangle.png, id=59, 268.00125pt x 286.06876pt>
+File: ./images/triangle.png Graphic file (type png)
+
+<use ./images/triangle.png>
+Package pdftex.def Info: ./images/triangle.png used on input line 11.
+(pdftex.def)             Requested size: 147.40112pt x 157.3383pt.
+ <./images/oeil.png, id=60, 614.295pt x 453.695pt>
+File: ./images/oeil.png Graphic file (type png)
+
+<use ./images/oeil.png>
+Package pdftex.def Info: ./images/oeil.png used on input line 21.
+(pdftex.def)             Requested size: 337.86328pt x 249.53302pt.
+ [14 <./images/triangle.png>] [15 <./images/oeil.png>]
+<./images/fixation.png, id=67, 534.99875pt x 247.92625pt>
+File: ./images/fixation.png Graphic file (type png)
+
+<use ./images/fixation.png>
+Package pdftex.def Info: ./images/fixation.png used on input line 45.
+(pdftex.def)             Requested size: 294.25021pt x 136.35985pt.
+ [16 <./images/fixation.png>]
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+Overfull \hbox (7.06575pt too wide) in paragraph at lines 58--59
+[]\OT1/cmr/m/n/10.95 Les 3 types de c^ones en-voi-ent chacun un nombre de stim-
+u-la-tions ^^Selectriques
+ []
+
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no   in font cmr10!
+<./images/stroop.png, id=71, 445.665pt x 169.63374pt>
+File: ./images/stroop.png Graphic file (type png)
+
+<use ./images/stroop.png>
+Package pdftex.def Info: ./images/stroop.png used on input line 76.
+(pdftex.def)             Requested size: 245.1165pt x 93.29883pt.
+ [17]
+Overfull \hbox (3.14502pt too wide) in paragraph at lines 87--88
+\OT1/cmr/m/n/10.95 La per-cep-tion du mouvement doit forc^^Sement r^^Sesulter d
+e la su-ces-sion d'images,
+ []
+
+[18 <./images/stroop.png>]
+Overfull \hbox (13.3621pt too wide) in paragraph at lines 99--100
+[]\OT1/cmr/m/n/10.95 L'effet phi est la sen-sa-tion visuelle de mouvement pro-v
+oqu^^Ree par l'apparition
+ []
+
+
+Overfull \hbox (15.79831pt too wide) in paragraph at lines 99--100
+\OT1/cmr/m/n/10.95 d'images per^^Xcues suc-cess-ives, sus-cept-ibles d'^etres r
+ac-cord^^Rees par un d^^Seplacement
+ []
+
+<./images/cites.png, id=78, 805.0075pt x 534.99875pt>
+File: ./images/cites.png Graphic file (type png)
+ <use ./images/cites.png>
+Package pdftex.def Info: ./images/cites.png used on input line 119.
+(pdftex.def)             Requested size: 281.75685pt x 187.25237pt.
+
+[19] <./images/elephant.png, id=83, 590.205pt x 539.01375pt>
+File: ./images/elephant.png Graphic file (type png)
+
+<use ./images/elephant.png>
+Package pdftex.def Info: ./images/elephant.png used on input line 128.
+(pdftex.def)             Requested size: 206.57484pt x 188.65762pt.
+
+Overfull \hbox (6.66318pt too wide) in paragraph at lines 131--132
+\OT1/cmr/m/n/10.95 l'image am-bigue. Nous per-cevons beacoup d'objets mais les 
+pro-ces-sus bottom-
+ []
+
+[20 <./images/cites.png> <./images/elephant.png>]
+<./images/amorce.png, id=87, 803.0pt x 589.20125pt>
+File: ./images/amorce.png Graphic file (type png)
+ <use ./images/amorce.png>
+Package pdftex.def Info: ./images/amorce.png used on input line 137.
+(pdftex.def)             Requested size: 281.05421pt x 206.22351pt.
+
+<./images/kinetic.png, id=88, 505.89pt x 351.3125pt>
+File: ./images/kinetic.png Graphic file (type png)
+
+<use ./images/kinetic.png>
+Package pdftex.def Info: ./images/kinetic.png used on input line 161.
+(pdftex.def)             Requested size: 177.06415pt x 122.96121pt.
+ [21 <./images/amorce.png>]
+Missing character: There is no Ã in font cmbx10!
+Missing character: There is no © in font cmbx10!
+
+Overfull \hbox (13.79085pt too wide) in paragraph at lines 189--190
+\OT1/cmr/m/n/10.95 Chaque h^^Semisph^^Rere traite une demi-image et la part-age
+ avec l'autre h^^Semisph^^Rere.
+ []
+
+
+Overfull \hbox (7.58583pt too wide) in paragraph at lines 189--190
+\OT1/cmr/m/n/10.95 Mais que se passe-t-il si l'information ne passe plus entre 
+les deux h^^Semisph^^Reres?
+ []
+
+[22 <./images/kinetic.png>]
+Overfull \hbox (0.30618pt too wide) in paragraph at lines 209--210
+[]\OT1/cmr/m/n/10.95 S'adapter ^^Ra la dis-tance de l^^Secran pour ob-tenir une
+ im-age nette. (cristal-
+ []
+
+
+Overfull \hbox (9.16756pt too wide) in paragraph at lines 211--212
+[]\OT1/cmr/m/n/10.95 Lors d'une prom-en-ade noc-turne, re-conna^^^Ptre des ob-j
+ets dans la p^^Senombre
+ []
+
+) [23] (./notes.aux) ) 
 Here is how much of TeX's memory you used:
- 14952 strings out of 493304
- 263582 string characters out of 6139871
- 373623 words of memory out of 5000000
- 18094 multiletter control sequences out of 15000+600000
+ 15865 strings out of 493304
+ 276746 string characters out of 6139871
+ 393790 words of memory out of 5000000
+ 18974 multiletter control sequences out of 15000+600000
  10320 words of font info for 39 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 62i,8n,65p,857b,245s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on notes_visComp.pdf (13 pages, 207826 bytes).
+ 62i,8n,65p,1082b,245s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on notes.pdf (23 pages, 1660816 bytes).
 PDF statistics:
- 86 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
+ 125 PDF objects out of 1000 (max. 8388607)
+ 79 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 33 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 

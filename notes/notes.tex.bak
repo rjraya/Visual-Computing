@@ -59,7 +59,7 @@
 \usepackage[]{algorithm2e}  
 \usepackage{algorithmic}
 \usepackage{url}
-
+\usepackage[french,british]{babel}
 \lstdefinestyle{freefempp}{
   language=C++,
   basicstyle=\footnotesize\ttfamily,
@@ -78,5 +78,7 @@
 \input{styles/styles}
 \section{Introduction to Computer Graphics}
 \input{graphics/intro}
+\section{Vision humaine}
+\input{vision/vision}
 
 \end{document}
