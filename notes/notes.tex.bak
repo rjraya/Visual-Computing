@@ -80,5 +80,7 @@
 \input{graphics/intro}
 \section{Vision humaine}
 \input{vision/vision}
+\section{Visualisation de l'information}
+\input{vision/visualisation}
 
 \end{document}
