@@ -1,25 +1,25 @@
 \select@language {british}
 \contentsline {section}{\numberline {1}Interaction paradigms}{2}
-\contentsline {subsection}{\numberline {1.1}Command lines}{2}
+\contentsline {subsection}{\numberline {1.1}Command lines}{3}
 \contentsline {subsection}{\numberline {1.2}WIMP (Windows, icons, menus and pointers)}{3}
-\contentsline {subsection}{\numberline {1.3}Direct manipulation interface}{3}
+\contentsline {subsection}{\numberline {1.3}Direct manipulation interface}{4}
 \contentsline {subsection}{\numberline {1.4}Form filling}{4}
 \contentsline {subsection}{\numberline {1.5}Experiment with the four previous paradigms}{4}
 \contentsline {subsection}{\numberline {1.6}Virtual reality}{4}
-\contentsline {subsection}{\numberline {1.7}Tangible interaction}{5}
+\contentsline {subsection}{\numberline {1.7}Tangible interaction}{6}
 \contentsline {subsection}{\numberline {1.8}Augmented reality}{6}
 \contentsline {subsection}{\numberline {1.9}Difference between virtual reality and augmented reality}{6}
 \contentsline {subsection}{\numberline {1.10}Voice command devices}{6}
-\contentsline {subsection}{\numberline {1.11}Gesture control}{6}
+\contentsline {subsection}{\numberline {1.11}Gesture control}{7}
 \contentsline {subsection}{\numberline {1.12}Brain–computer interface}{7}
 \contentsline {subsection}{\numberline {1.13}Bionic interfaces}{7}
 \contentsline {subsection}{\numberline {1.14}Wearables interfaces}{7}
-\contentsline {subsection}{\numberline {1.15}Interaction ambient}{7}
+\contentsline {subsection}{\numberline {1.15}Interaction ambient}{8}
 \contentsline {subsection}{\numberline {1.16}Final thoughts}{8}
-\contentsline {subsection}{\numberline {1.17}Exercises}{8}
+\contentsline {subsection}{\numberline {1.17}Exercises}{9}
 \contentsline {section}{\numberline {2}Introduction to Computer Graphics}{9}
 \contentsline {subsection}{\numberline {2.1}Modeling}{10}
-\contentsline {subsection}{\numberline {2.2}Rendering}{10}
+\contentsline {subsection}{\numberline {2.2}Rendering}{11}
 \contentsline {subsubsection}{\numberline {2.2.1}Visibility}{11}
 \contentsline {subsubsection}{\numberline {2.2.2}Shading and materials}{13}
 \contentsline {subsection}{\numberline {2.3}Exercises}{14}
@@ -33,33 +33,34 @@
 \contentsline {subsubsection}{\numberline {3.2.5}Recréer la profondeur en 2D}{23}
 \contentsline {subsection}{\numberline {3.3}Remarques}{23}
 \contentsline {subsection}{\numberline {3.4}Exercises}{24}
-\contentsline {section}{\numberline {4}Visualisation de l'information}{24}
-\contentsline {subsection}{\numberline {4.1}Grammaire visuelles}{25}
-\contentsline {subsection}{\numberline {4.2}Principes de conception (Tufte)}{25}
-\contentsline {subsection}{\numberline {4.3}Distorsions g\'eom\'etriques}{25}
-\contentsline {subsection}{\numberline {4.4}Erreurs fr\'equents dans la conception ou interpr\'etation des visualisations}{26}
-\contentsline {subsection}{\numberline {4.5}Exercises}{28}
-\contentsline {section}{\numberline {5}M\'ecanismes des jeux}{28}
-\contentsline {subsection}{\numberline {5.1}17 "Game Mechanics"}{29}
-\contentsline {subsubsection}{\numberline {5.1.1}L'espace}{29}
-\contentsline {subsubsection}{\numberline {5.1.2}Le temps}{29}
-\contentsline {subsubsection}{\numberline {5.1.3}Les objets}{29}
-\contentsline {subsubsection}{\numberline {5.1.4}Actions}{30}
-\contentsline {subsubsection}{\numberline {5.1.5}R\`egles}{30}
-\contentsline {subsubsection}{\numberline {5.1.6}Modes}{31}
-\contentsline {subsubsection}{\numberline {5.1.7}Skills}{31}
-\contentsline {subsubsection}{\numberline {5.1.8}La chance}{31}
-\contentsline {subsubsection}{\numberline {5.1.9}Points de vue ou position de la cam\'era}{32}
-\contentsline {subsubsection}{\numberline {5.1.10}Vue}{32}
-\contentsline {subsubsection}{\numberline {5.1.11}Roles}{32}
-\contentsline {subsubsection}{\numberline {5.1.12}Secrets}{32}
-\contentsline {subsubsection}{\numberline {5.1.13}Collaboration ou comp\'etition}{32}
-\contentsline {subsubsection}{\numberline {5.1.14}Mod\'elisation mutuelle}{33}
-\contentsline {subsubsection}{\numberline {5.1.15}Spectateurs}{33}
-\contentsline {subsubsection}{\numberline {5.1.16}Triangularity}{33}
-\contentsline {subsubsection}{\numberline {5.1.17}\'Echapper \`a la r\'ealit\'e}{33}
-\contentsline {subsubsection}{\numberline {5.1.18}Scoreboard ou analytics}{33}
-\contentsline {subsubsection}{\numberline {5.1.19}Gamification}{33}
-\contentsline {subsubsection}{\numberline {5.1.20}Le flow}{33}
-\contentsline {subsubsection}{\numberline {5.1.21}Motivation}{34}
-\contentsline {subsubsection}{\numberline {5.1.22}Exercises}{35}
+\contentsline {section}{\numberline {4}Cognition humaine}{24}
+\contentsline {section}{\numberline {5}Visualisation de l'information}{26}
+\contentsline {subsection}{\numberline {5.1}Grammaire visuelles}{26}
+\contentsline {subsection}{\numberline {5.2}Principes de conception (Tufte)}{27}
+\contentsline {subsection}{\numberline {5.3}Distorsions g\'eom\'etriques}{27}
+\contentsline {subsection}{\numberline {5.4}Erreurs fr\'equents dans la conception ou interpr\'etation des visualisations}{28}
+\contentsline {subsection}{\numberline {5.5}Exercises}{29}
+\contentsline {section}{\numberline {6}M\'ecanismes des jeux}{30}
+\contentsline {subsection}{\numberline {6.1}17 "Game Mechanics"}{30}
+\contentsline {subsubsection}{\numberline {6.1.1}L'espace}{30}
+\contentsline {subsubsection}{\numberline {6.1.2}Le temps}{31}
+\contentsline {subsubsection}{\numberline {6.1.3}Les objets}{31}
+\contentsline {subsubsection}{\numberline {6.1.4}Actions}{31}
+\contentsline {subsubsection}{\numberline {6.1.5}R\`egles}{32}
+\contentsline {subsubsection}{\numberline {6.1.6}Modes}{32}
+\contentsline {subsubsection}{\numberline {6.1.7}Skills}{33}
+\contentsline {subsubsection}{\numberline {6.1.8}La chance}{33}
+\contentsline {subsubsection}{\numberline {6.1.9}Points de vue ou position de la cam\'era}{33}
+\contentsline {subsubsection}{\numberline {6.1.10}Vue}{33}
+\contentsline {subsubsection}{\numberline {6.1.11}Roles}{34}
+\contentsline {subsubsection}{\numberline {6.1.12}Secrets}{34}
+\contentsline {subsubsection}{\numberline {6.1.13}Collaboration ou comp\'etition}{34}
+\contentsline {subsubsection}{\numberline {6.1.14}Mod\'elisation mutuelle}{34}
+\contentsline {subsubsection}{\numberline {6.1.15}Spectateurs}{34}
+\contentsline {subsubsection}{\numberline {6.1.16}Triangularity}{34}
+\contentsline {subsubsection}{\numberline {6.1.17}\'Echapper \`a la r\'ealit\'e}{34}
+\contentsline {subsubsection}{\numberline {6.1.18}Scoreboard ou analytics}{34}
+\contentsline {subsubsection}{\numberline {6.1.19}Gamification}{34}
+\contentsline {subsubsection}{\numberline {6.1.20}Le flow}{35}
+\contentsline {subsubsection}{\numberline {6.1.21}Motivation}{36}
+\contentsline {subsubsection}{\numberline {6.1.22}Exercises}{37}

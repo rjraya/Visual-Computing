@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.17)  23 JUN 2017 17:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.17)  24 JUN 2017 14:33
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -679,92 +679,81 @@ Package frenchb.ldf Warning: OT1 encoding should not be used for French.
 (frenchb.ldf)                Add \usepackage[T1]{fontenc} to the preamble
 (frenchb.ldf)                of your document, on input line 75.
 
-(./notes.toc
-LaTeX Font Info:    Try loading font information for U+msa on input line 3.
- (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 3.
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Missing character: There is no â in font cmr10!
-Missing character: There is no € in font cmr10!
-Missing character: There is no “ in font cmr10!
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no © in font cmr10!
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
-\tf@toc=\write4
-\openout4 = `notes.toc'.
-
- (./styles/styles.tex
+(./styles/styles.tex
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [2]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 12.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 12.
- [3] [4] [5]
+
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for U+msa on input line 36.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 36.
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [2] [3]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
+ [4]
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no © in font cmr10!
- [6]
 Missing character: There is no â in font cmbx12!
 Missing character: There is no € in font cmbx12!
 Missing character: There is no “ in font cmbx12!
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no ­ in font cmr10!
-
-[7] [8]) (./graphics/intro.tex [9]
-<./images/raster.png, id=40, 622.325pt x 301.125pt>
+ [5]
+[6]) (./graphics/intro.tex [7] [8]
+<./images/raster.png, id=37, 622.325pt x 301.125pt>
 File: ./images/raster.png Graphic file (type png)
  <use ./images/raster.png>
 Package pdftex.def Info: ./images/raster.png used on input line 50.
 (pdftex.def)             Requested size: 466.7426pt x 225.84319pt.
-
-[10]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- <./images/painter.png, id=44, 722.7pt x 313.17pt>
+
+[9 <./images/raster.png>] <./images/painter.png, id=41, 722.7pt x 313.17pt>
 File: ./images/painter.png Graphic file (type png)
 
 <use ./images/painter.png>
 Package pdftex.def Info: ./images/painter.png used on input line 65.
 (pdftex.def)             Requested size: 542.02367pt x 234.8769pt.
- [11 <./images/raster.png>]
-<./images/raytrace.png, id=48, 773.89125pt x 324.21124pt>
+
+<./images/raytrace.png, id=42, 773.89125pt x 324.21124pt>
 File: ./images/raytrace.png Graphic file (type png)
 
 <use ./images/raytrace.png>
 Package pdftex.def Info: ./images/raytrace.png used on input line 74.
 (pdftex.def)             Requested size: 580.417pt x 243.15784pt.
- [12 <./images/painter.png> <./images/raytrace.png>] <./images/shadow.png, id=5
-2, 583.17876pt x 398.48875pt>
+ [10 <./images/painter.png>]
+<./images/shadow.png, id=46, 583.17876pt x 398.48875pt>
 File: ./images/shadow.png Graphic file (type png)
 
 <use ./images/shadow.png>
 Package pdftex.def Info: ./images/shadow.png used on input line 93.
 (pdftex.def)             Requested size: 437.383pt x 298.86583pt.
- [13 <./images/shadow.png>]
+ [11 <./images/raytrace.png>]
 Overfull \hbox (19.28926pt too wide) in paragraph at lines 107--108
 []\OT1/cmr/m/n/10.95 See: $\OT1/cmtt/m/n/10.95 http : / / people . csail . mit 
 . edu / fredo / Depiction / 1 _ Introduction /
  []
 
-
+[12 <./images/shadow.png>]
 Overfull \hbox (93.60391pt too wide) in paragraph at lines 115--116
 []\OT1/cmr/m/n/10.95 We have to mul-tiply matrices $((0\OML/cmm/m/it/10.95 ; \O
 MS/cmsy/m/n/10.95 ^^@\OT1/cmr/m/n/10.95 1\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.
@@ -779,27 +768,27 @@ ML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.95 0\OML/cmm/m/it/10.95 ; \OT1/cmr/m/n/10.9
 5 1))$. 
  []
 
-) (./vision/vision.tex [14]
-<./images/triangle.png, id=62, 268.00125pt x 286.06876pt>
+) (./vision/vision.tex
+<./images/triangle.png, id=53, 268.00125pt x 286.06876pt>
 File: ./images/triangle.png Graphic file (type png)
 
 <use ./images/triangle.png>
 Package pdftex.def Info: ./images/triangle.png used on input line 11.
 (pdftex.def)             Requested size: 147.40112pt x 157.3383pt.
- <./images/oeil.png, id=63, 614.295pt x 453.695pt>
+ <./images/oeil.png, id=54, 614.295pt x 453.695pt>
 File: ./images/oeil.png Graphic file (type png)
 
 <use ./images/oeil.png>
 Package pdftex.def Info: ./images/oeil.png used on input line 21.
 (pdftex.def)             Requested size: 337.86328pt x 249.53302pt.
- [15 <./images/triangle.png>] [16 <./images/oeil.png>]
-<./images/fixation.png, id=70, 534.99875pt x 247.92625pt>
+ [13 <./images/triangle.png>] [14 <./images/oeil.png>]
+<./images/fixation.png, id=64, 534.99875pt x 247.92625pt>
 File: ./images/fixation.png Graphic file (type png)
 
 <use ./images/fixation.png>
 Package pdftex.def Info: ./images/fixation.png used on input line 45.
 (pdftex.def)             Requested size: 294.25021pt x 136.35985pt.
- [17 <./images/fixation.png>]
+ [15 <./images/fixation.png>]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
@@ -811,19 +800,19 @@ u-la-tions ^^Selectriques
 
 Missing character: There is no Ã in font cmr10!
 Missing character: There is no   in font cmr10!
-<./images/stroop.png, id=74, 445.665pt x 169.63374pt>
+<./images/stroop.png, id=68, 445.665pt x 169.63374pt>
 File: ./images/stroop.png Graphic file (type png)
 
 <use ./images/stroop.png>
 Package pdftex.def Info: ./images/stroop.png used on input line 76.
 (pdftex.def)             Requested size: 245.1165pt x 93.29883pt.
- [18]
+ [16]
 Overfull \hbox (3.14502pt too wide) in paragraph at lines 87--88
 \OT1/cmr/m/n/10.95 La per-cep-tion du mouvement doit forc^^Sement r^^Sesulter d
 e la su-ces-sion d'images,
  []
 
-[19 <./images/stroop.png>]
+[17 <./images/stroop.png>]
 Overfull \hbox (13.3621pt too wide) in paragraph at lines 99--100
 []\OT1/cmr/m/n/10.95 L'effet phi est la sen-sa-tion visuelle de mouvement pro-v
 oqu^^Ree par l'apparition
@@ -835,13 +824,13 @@ Overfull \hbox (15.79831pt too wide) in paragraph at lines 99--100
 ac-cord^^Rees par un d^^Seplacement
  []
 
-<./images/cites.png, id=82, 805.0075pt x 534.99875pt>
+<./images/cites.png, id=75, 805.0075pt x 534.99875pt>
 File: ./images/cites.png Graphic file (type png)
  <use ./images/cites.png>
 Package pdftex.def Info: ./images/cites.png used on input line 119.
 (pdftex.def)             Requested size: 281.75685pt x 187.25237pt.
 
-[20] <./images/elephant.png, id=86, 590.205pt x 539.01375pt>
+[18] <./images/elephant.png, id=79, 590.205pt x 539.01375pt>
 File: ./images/elephant.png Graphic file (type png)
 
 <use ./images/elephant.png>
@@ -853,20 +842,20 @@ Overfull \hbox (6.66318pt too wide) in paragraph at lines 131--132
 pro-ces-sus bottom-
  []
 
-[21 <./images/cites.png> <./images/elephant.png>]
-<./images/amorce.png, id=90, 803.0pt x 589.20125pt>
+[19 <./images/cites.png> <./images/elephant.png>]
+<./images/amorce.png, id=84, 803.0pt x 589.20125pt>
 File: ./images/amorce.png Graphic file (type png)
  <use ./images/amorce.png>
 Package pdftex.def Info: ./images/amorce.png used on input line 137.
 (pdftex.def)             Requested size: 281.05421pt x 206.22351pt.
 
-<./images/kinetic.png, id=91, 505.89pt x 351.3125pt>
+<./images/kinetic.png, id=85, 505.89pt x 351.3125pt>
 File: ./images/kinetic.png Graphic file (type png)
 
 <use ./images/kinetic.png>
 Package pdftex.def Info: ./images/kinetic.png used on input line 161.
 (pdftex.def)             Requested size: 177.06415pt x 122.96121pt.
- [22 <./images/amorce.png>]
+ [20 <./images/amorce.png>]
 Missing character: There is no Ã in font cmbx10!
 Missing character: There is no © in font cmbx10!
 
@@ -881,7 +870,7 @@ Overfull \hbox (7.58583pt too wide) in paragraph at lines 189--190
 les deux h^^Semisph^^Reres?
  []
 
-[23 <./images/kinetic.png>]
+[21 <./images/kinetic.png>]
 Overfull \hbox (0.30618pt too wide) in paragraph at lines 209--210
 []\OT1/cmr/m/n/10.95 S'adapter ^^Ra la dis-tance de l^^Secran pour ob-tenir une
  im-age nette. (cristal-
@@ -893,7 +882,65 @@ Overfull \hbox (9.16756pt too wide) in paragraph at lines 211--212
 ets dans la p^^Senombre
  []
 
-) (./vision/visualisation.tex [24]
+) (./styles/cognition.tex
+Overfull \hbox (18.95154pt too wide) in paragraph at lines 3--4
+\OT1/cmr/m/n/10.95 ticulier dans la m^^Semoire, rais-on-nement, con-nais-sances
+ et ap-pren-tis-sage. D'autres
+ []
+
+[22] <./images/dual.png, id=95, 718.685pt x 526.96875pt>
+File: ./images/dual.png Graphic file (type png)
+
+<use ./images/dual.png>
+Package pdftex.def Info: ./images/dual.png used on input line 31.
+(pdftex.def)             Requested size: 251.54352pt x 184.44182pt.
+ [23] <./images/prof.png, id=99, 458.71375pt x 481.8pt>
+File: ./images/prof.png Graphic file (type png)
+
+<use ./images/prof.png>
+Package pdftex.def Info: ./images/prof.png used on input line 40.
+(pdftex.def)             Requested size: 160.55222pt x 168.63252pt.
+ [24 <./images/dual.png> <./images/prof.png>]
+Overfull \hbox (21.38492pt too wide) in paragraph at lines 49--50
+\OT1/cmr/m/n/10.95 mani^^Rere plus g^^Sen^^Serale, entre deux sources d'informa
+tion. Com-bien d'informations
+ []
+
+
+Overfull \hbox (22.51036pt too wide) in paragraph at lines 49--50
+\OT1/cmr/m/n/10.95 de mettre en re-la-tion plusieurs ^^Sel^^Sements d'informati
+on. D^^Secomposer l'information
+ []
+
+<./images/structure.png, id=103, 653.44125pt x 410.53375pt>
+File: ./images/structure.png Graphic file (type png)
+
+<use ./images/structure.png>
+Package pdftex.def Info: ./images/structure.png used on input line 55.
+(pdftex.def)             Requested size: 228.70786pt x 143.68896pt.
+ [25 <./images/structure.png>]
+<./images/semantique.png, id=108, 588.1975pt x 326.21875pt>
+File: ./images/semantique.png Graphic file (type png)
+
+<use ./images/semantique.png>
+Package pdftex.def Info: ./images/semantique.png used on input line 81.
+(pdftex.def)             Requested size: 205.87221pt x 114.17827pt.
+
+<./images/principes.png, id=109, 609.27625pt x 438.63875pt>
+File: ./images/principes.png Graphic file (type png)
+
+<use ./images/principes.png>
+Package pdftex.def Info: ./images/principes.png used on input line 96.
+(pdftex.def)             Requested size: 213.24988pt x 153.52585pt.
+ [26 <./images/semantique.png>]
+<./images/exercise3.png, id=113, 827.09pt x 445.665pt>
+File: ./images/exercise3.png Graphic file (type png)
+
+<use ./images/exercise3.png>
+Package pdftex.def Info: ./images/exercise3.png used on input line 106.
+(pdftex.def)             Requested size: 454.9009pt x 245.1165pt.
+) (./vision/visualisation.tex [27 <./images/principes.png> <./images/exercise3.
+png>]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
@@ -906,33 +953,33 @@ Overfull \hbox (2.16872pt too wide) in paragraph at lines 39--40
 al-iz-a-tions qui peuvent
  []
 
-[25]
+[28]
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
- [26]
+ [29]
 Overfull \hbox (6.94415pt too wide) in paragraph at lines 80--81
 []\OT1/cmr/m/n/10.95 Les visu-al-isa-tions dy-namiques font us-age de des utile
 s par-ticuli-ers: change-
  []
 
-<./images/exercise1.png, id=108, 1136.245pt x 643.40375pt>
+<./images/exercise1.png, id=123, 1136.245pt x 643.40375pt>
 File: ./images/exercise1.png Graphic file (type png)
 
 <use ./images/exercise1.png>
 Package pdftex.def Info: ./images/exercise1.png used on input line 88.
 (pdftex.def)             Requested size: 397.6917pt x 225.19469pt.
- [27]) (./styles/jeux.tex [28 <./images/exercise1.png>] [29] <./images/uncanny.
-png, id=118, 590.205pt x 455.7025pt>
+ [30]) (./styles/jeux.tex [31 <./images/exercise1.png>] [32] <./images/uncanny.
+png, id=134, 590.205pt x 455.7025pt>
 File: ./images/uncanny.png Graphic file (type png)
 
 <use ./images/uncanny.png>
 Package pdftex.def Info: ./images/uncanny.png used on input line 37.
 (pdftex.def)             Requested size: 324.61375pt x 250.63713pt.
- [30 <./images/uncanny.png>]
+ [33 <./images/uncanny.png>]
 Overfull \hbox (8.79834pt too wide) in paragraph at lines 63--64
 []\OT1/cmr/m/n/10.95 A chaque change-ment de mode, le joueur doit d^^Sesapprend
 re et r^^Seapprendre.
@@ -944,31 +991,31 @@ Overfull \hbox (11.02295pt too wide) in paragraph at lines 88--89
 'initier des ph^^Senom^^Renes
  []
 
-[31]
+[34]
 Overfull \hbox (10.35373pt too wide) in paragraph at lines 97--98
 []\OT1/cmr/m/n/10.95 Scroll lat^^Seral: la cam^^Sera se d^^Seplace de gauche ^^
 Ra droite avec le d^^Seplacement
  []
 
-[32] [33] <./images/flow.png, id=132, 588.1975pt x 571.13374pt>
+[35] [36] <./images/flow.png, id=147, 588.1975pt x 571.13374pt>
 File: ./images/flow.png Graphic file (type png)
 
 <use ./images/flow.png>
 Package pdftex.def Info: ./images/flow.png used on input line 177.
 (pdftex.def)             Requested size: 323.50961pt x 314.12453pt.
 
-<./images/exercise2.png, id=133, 1098.1025pt x 600.2425pt>
+<./images/exercise2.png, id=148, 1098.1025pt x 600.2425pt>
 File: ./images/exercise2.png Graphic file (type png)
 
 <use ./images/exercise2.png>
 Package pdftex.def Info: ./images/exercise2.png used on input line 190.
 (pdftex.def)             Requested size: 603.95824pt x 330.13438pt.
- [34 <./images/flow.png>]) [35 <./images/exercise2.png>] (./notes.aux) ) 
+ [37 <./images/flow.png>]) [38 <./images/exercise2.png>] (./notes.aux) ) 
 Here is how much of TeX's memory you used:
- 15896 strings out of 493304
- 277331 string characters out of 6139871
- 393790 words of memory out of 5000000
- 18995 multiletter control sequences out of 15000+600000
+ 15927 strings out of 493304
+ 278041 string characters out of 6139871
+ 390790 words of memory out of 5000000
+ 19020 multiletter control sequences out of 15000+600000
  10320 words of font info for 39 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  62i,8n,65p,1082b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -981,10 +1028,10 @@ onts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/ty
 pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmtt10.pfb>
-Output written on notes.pdf (35 pages, 2472484 bytes).
+Output written on notes.pdf (38 pages, 3544315 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 105 compressed objects within 2 object streams
+ 186 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 93 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 123 words of extra memory for PDF output out of 10000 (max. 10000000)
 
