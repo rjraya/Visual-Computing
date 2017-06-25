@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.17)  25 JUN 2017 15:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.5.17)  25 JUN 2017 22:08
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1096,27 +1096,95 @@ Overfull \hbox (28.08383pt too wide) in paragraph at lines 117--118
 ri-able ind^^Sependante,
  []
 
-[42]) [43] (./notes.aux) ) 
+[42] [43]
+LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10.95> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 152.
+ <./images/exercise4.png, id=172, 830.10126pt x 449.68pt>
+File: ./images/exercise4.png Graphic file (type png)
+
+<use ./images/exercise4.png>
+Package pdftex.def Info: ./images/exercise4.png used on input line 178.
+(pdftex.def)             Requested size: 456.55711pt x 247.32475pt.
+ [44]) (./vision/eye.tex [45 <./images/exercise4.png>] <./images/electro.png, i
+d=179, 370.38374pt x 319.1925pt>
+File: ./images/electro.png Graphic file (type png)
+
+<use ./images/electro.png>
+Package pdftex.def Info: ./images/electro.png used on input line 20.
+(pdftex.def)             Requested size: 203.71169pt x 175.55641pt.
+Missing character: There is no √ in font cmr10!
+Missing character: There is no ® in font cmr10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no © in font cmr10!
+
+Overfull \hbox (2.59758pt too wide) in paragraph at lines 31--32
+[]\OT1/cmr/m/n/10.95 On peut am^^Seliorer la prcision par la post-calibration, 
+c'est-^^Ra-dire mettre
+ []
+
+Missing character: There is no √ in font cmr10!
+Missing character: There is no © in font cmr10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no © in font cmr10!
+[46 <./images/electro.png>]
+Missing character: There is no √ in font cmr10!
+Missing character: There is no © in font cmr10!
+Missing character: There is no √ in font cmr10!
+Missing character: There is no © in font cmr10!
+
+<./images/cross.png, id=183, 623.32875pt x 305.14pt>
+File: ./images/cross.png Graphic file (type png)
+ <use ./images/cross.png>
+Package pdftex.def Info: ./images/cross.png used on input line 56.
+(pdftex.def)             Requested size: 342.83186pt x 167.8275pt.
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ú in font cmr10!
+Missing character: There is no ‚ in font cmr10!
+Missing character: There is no Ä in font cmr10!
+Missing character: There is no ù in font cmr10!
+
+<./images/experience.png, id=184, 787.94376pt x 282.05376pt>
+File: ./images/experience.png Graphic file (type png)
+
+<use ./images/experience.png>
+Package pdftex.def Info: ./images/experience.png used on input line 65.
+(pdftex.def)             Requested size: 433.3704pt x 155.13004pt.
+ [47 <./images/cross.png>]
+<./images/exercise5.png, id=188, 821.0675pt x 329.23pt>
+File: ./images/exercise5.png Graphic file (type png)
+
+<use ./images/exercise5.png>
+Package pdftex.def Info: ./images/exercise5.png used on input line 84.
+(pdftex.def)             Requested size: 451.58853pt x 181.07706pt.
+ [48 <./images/experience.png>]) [49 <./images/exercise5.png>] (./notes.aux) ) 
 Here is how much of TeX's memory you used:
- 15932 strings out of 493304
- 278108 string characters out of 6139871
+ 15961 strings out of 493304
+ 278734 string characters out of 6139871
  392790 words of memory out of 5000000
- 19022 multiletter control sequences out of 15000+600000
+ 19043 multiletter control sequences out of 15000+600000
  10320 words of font info for 39 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 62i,8n,65p,1167b,247s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on notes.pdf (43 pages, 3558737 bytes).
+ 62i,8n,65p,1167b,311s stack positions out of 5000i,500n,10000p,200000b,80000s
+<
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmtt10.pfb>
+Output written on notes.pdf (49 pages, 3900827 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
- 125 compressed objects within 2 object streams
+ 226 PDF objects out of 1000 (max. 8388607)
+ 138 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 123 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 148 words of extra memory for PDF output out of 10000 (max. 10000000)
 
