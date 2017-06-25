@@ -85,6 +85,8 @@
 \input{vision/visualisation}
 \section{M\'ecanismes des jeux}
 \input{styles/jeux}
+\section{Usability}
+\input{vision/usability}
 
 
 
