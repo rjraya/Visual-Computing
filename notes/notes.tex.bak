@@ -85,6 +85,10 @@
 \input{vision/visualisation}
 \section{M\'ecanismes des jeux}
 \input{styles/jeux}
+\section{Edge detection}
+\input{graphics/edge}
+\section{Shape and blob detection}
+\input{graphics/shape}
 \section{Usability}
 \input{vision/usability}
 \section{Eye tracking}

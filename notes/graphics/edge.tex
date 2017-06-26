@@ -1,0 +1,263 @@
+\subsection{Generalities}
+
+Edges seem fundamental to human perception. They form a compressed version of the image. 
+
+In an image we can differentiate:
+
+\begin{itemize}
+\item Edges: boundaries between bland images and regions. 
+\item Regions: homogeneous areas between edges.
+\end{itemize}
+
+There is of course a duality between detecting edges and regions in the sense that determining one determines the other. Edges can be understood as pixel locations of abrupt gray-level change. Mathematically, the gradient of the gray-level has a discontinuity at that point. This discontinuity (constrat) may be of the following types:
+
+\begin{itemize}
+\item Depth discontinuity: Abrupt depth change in the world
+\item Surface normal discontinuity: Change in surface orientation
+\item Illumination discontinuity: Shadows, lighting changes
+\item Reflectance discontinuity: Surface properties, markings
+\end{itemize}
+
+This discontinuities for the gradient can be classified as: 
+
+\begin{itemize}
+\item Convex roof edge.
+\item Concave roof edge.
+\item Concave ramp edge.
+\item Step edge.
+\item Bar or line edge.
+\end{itemize}
+
+There are different ways of describing edges:
+
+\begin{itemize}
+\item Edge normal: unit vector in the direction of maximum intensity change.
+\item Edge direction: unit vector perpendicular to the edge normal.
+\item Edge position or center: image location at which edge is located.
+\item Edge strength: speed of intensity variation accross the edge. 
+\end{itemize}
+
+\subsection{Edge detection}
+
+\subsubsection{Gradient based}
+
+Based on the idea that edge information in an image, is found by looking at the relationship between a pixel 
+and its neighbours. i.e. edge is found by discontinuity of grey level values. An ideal edge detector should produce an edge indication localised to a single pixel located at the mid-
+point of the slope.
+
+There are two major classes of differential edge detection:
+
+\begin{itemize}
+\item First order derivative: Some form of spatial first order differentiation is performed, and the resulting gradient is compared to a threshold value. An edge is judged present if the gradient exceeds the threshold.
+\item Second order derivative: An edge is judged present if there is a significant spatial change in the polarity of the second derivative.
+\end{itemize}
+
+Edges are located at:
+
+\begin{itemize}
+\item Maxima of absolute value of first derivative.
+\item Zero-crossings of second derivative
+\end{itemize}
+
+The computational cost of computing first and second derivatives can be reduced by using the method of finite differences. The calculation of the gradient corresponds then mathematically to a vector which points to the direction of most rapid change in intensity, whose angle and orientation is computed as usual for a vector knowing its coordinates.
+
+\subsubsection{Convolution based}
+
+There is a problem with noise if we directly differentiate. One can get a signal with high frequency which leads to trouble with derivation. A solution to suppress high frequencies is to multiply the discrete Fourier transform of the signal convolving with a low-pass filter. The effect of this convolution is to smooth the signal we are working with. In the two dimensional case, this operation is costly but can be speed up if the filters are separable.
+
+As said, a kernel is a small matrix. The convolution operation can be understood as: for each pixel of the
+image, we compute its updated value as the sum of surrounding pixels weighted by the kernel values.
+
+The Prewitt filter:
+
+$\begin{bmatrix}
+1 \ 0 \ -1 \\
+1 \ 0 \ -1 \\ 
+1 \ 0 \ -1
+\end{bmatrix}$
+
+it is a separable kernel meaning it can be expressed as the product of vectors: $\begin{bmatrix} 1 \\ 1 \\ 1 \end{bmatrix}$ and $\begin{bmatrix} 1 \\ 0 \\ -1 \end{bmatrix}$.
+
+In a similar way, the Sobel kernel is also separable:
+
+$\begin{bmatrix}
+1 \ 0 \ -1 \\
+2 \ 0 \ -2 \\ 
+1 \ 0 \ -1
+\end{bmatrix} = 
+\begin{bmatrix} 1 \\ 2 \\ 1 \end{bmatrix} \cdot 
+\begin{bmatrix} 1 \ 0 \ -1 \end{bmatrix}$
+
+The Gaussian blur is a type of image-blurring filter that uses a Gaussian function or calculating the transformation to apply to each pixel in the image. 
+
+\subsubsection{Example: Canny edge detector}
+
+The Canny edge detector is an edge detection operator that uses a multi-stage algorithm to detect a wide range of edges in images. It is based in the following steps:
+
+\begin{itemize}
+\item Apply Gaussian filter to smooth the image in order to remove the noise.
+
+Since all edge detection results are easily affected by image noise, it is essential to filter out the noise to prevent false detection caused by noise. To smooth the image, a Gaussian filter is applied to convolve with the image. 
+
+\item Find the intensity gradients of the image.
+
+An edge in an image may point in a variety of directions, so the Canny algorithm uses four filters to detect horizontal, vertical and diagonal edges in the blurred image. 
+
+\item Apply non-maximum suppression to get rid of spurious response to edge detection.
+
+Non-maximum suppression is an edge thinning technique. Non-Maximum suppression is applied to "thin" the edge. After applying gradient calculation, the edge extracted from the gradient value is still quite blurred. Thus non-maximum suppression can help to suppress all the gradient values to 0 except the local maximal, which indicates location with the sharpest change of intensity value. 
+
+The algorithm for each pixel in the gradient image is:
+
+1. Compare the edge strength of the current pixel with the edge strength of the pixel in the positive and negative gradient directions.
+
+2. If the edge strength of the current pixel is the largest compared to the other pixels in the mask with the same direction (i.e., the pixel that is pointing in the y direction, it will be compared to the pixel above and below it in the vertical axis), the value will be preserved. Otherwise, the value will be suppressed.
+
+In more accurate implementations, linear interpolation is used between the two neighbouring pixels that straddle the gradient direction.
+
+\item Apply double threshold to determine potential edges.
+
+After application of non-maximum suppression, remaining edge pixels provide a more accurate representation of real edges in an image. However, some edge pixels remain that are caused by noise and color variation. In order to account for these spurious responses, it is essential to filter out edge pixels with a weak gradient value and preserve edge pixels with a high gradient value. This is accomplished by selecting high and low threshold values. If an edge pixel’s gradient value is higher than the high threshold value, it is marked as a strong edge pixel. If an edge pixel’s gradient value is smaller than the high threshold value and larger than the low threshold value, it is marked as a weak edge pixel. If an edge pixel's value is smaller than the low threshold value, it will be suppressed. The two threshold values are empirically determined and their definition will depend on the content of a given input image.
+
+\item Track edge by hysteresis: Finalize the detection of edges by suppressing all the other edges that are weak and not connected to strong edges.
+
+So far, the strong edge pixels should certainly be involved in the final edge image, as they are extracted from the true edges in the image. However, there will be some debate on the weak edge pixels, as these pixels can either be extracted from the true edge, or the noise/color variations. To achieve an accurate result, the weak edges caused by the latter reasons should be removed. Usually a weak edge pixel caused from true edges will be connected to a strong edge pixel while noise responses are unconnected. To track the edge connection, blob analysis is applied by looking at a weak edge pixel and its 8-connected neighborhood pixels. As long as there is one strong edge pixel that is involved in the blob, that weak edge point can be identified as one that should be preserved.
+
+\end{itemize}
+
+There are interesting effects that occur when increasing the scale $\sigma$ of the distribution. This always removes detail and never adds new ones. Edges positions may shift, edges may merge and edges may not split into two. Choosing the right scale is a difficult semantic problem.
+
+\subsubsection{Example: Tracking using occluding contours}
+
+\subsubsection{Learning-based edge detection}
+
+See Learning to Detect Natural Image Boundaries Using Local Brightness, Color and Texture Cues.
+
+We distinguish the problem of boundary detection from what is classically referred to as edge detection. A
+\textbf{boundary} is a contour in the image plane that represents a change in pixel ownership from one object or surface to another. In contrast, an edge is most often defined as an abrupt change in some low-level image feature such as brightness or color. Edge detection is thus one low-level technique that is commonly applied toward the goal of boundary detection.
+
+We formulate boundary-detection as a classification problem of discriminating non-boundary from boundary pixels and apply the precision-recall framework using human-marked boundaries from the Berkeley Segmentation
+Dataset as ground truth. The segmentation data set contains 5-10 segmentations for each of 1,000 images. 
+
+The objective is to learn the probability of being a boundary pixel on the basis of a set of features. Several approaches can be taken to do so:
+
+\begin{itemize}
+\item Classification: for every pixel, predict 1 if on a boundary and 0 otherwise.
+\item Regression: for every pixel, predict the distance to the nearest boundary. 
+\item Deep learning: each node stores a function of the linear combination of the activations of all nodes in the previous layers.
+
+The network can be trained to produce a desired output given a specific input by learning the linear combination weights.
+
+First and second layer features of a Convolutional Neural Net:can be understood as performing multi-scale filtering. The weights and thresholds are chosen by the optimization procedure.
+\end{itemize}
+
+Edge detection remains an open problem:
+
+\begin{itemize}
+\item Convolution operators respond to steep smooth shading.
+\item Parametric matchers tend to reject non ideal edges.(A guided tour of computer vision, Nalwa).
+\item Arbitrary thresholds and scale sizes are required.
+\item Learning-based methods need exhaustive databases.
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

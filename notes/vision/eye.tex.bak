@@ -1,3 +1,5 @@
+\subsection{Generalities}
+
 Eye tracking is the process of measuring either the point of gaze (where one is looking) or the motion of an eye relative to the head. An eye tracker is a device for measuring eye positions and eye movement. There are a number of methods for measuring eye movement. The most popular variant uses video images from which the eye position is extracted. Other methods use search coils or are based on the electrooculogram.
 
 In the 1950s, Alfred L. Yarbus did important eye tracking research and his 1967 book is often quoted. He showed the task given to a subject has a very large influence on the subject's eye movement. He also wrote about the relation between fixations and interest.
@@ -73,6 +75,14 @@ Prochainement il y aura un eye tracker dans chaque laptop
 \item Votre start-up?
 \end{itemize}
 
+\subsection{Exercises}
+
+\begin{figure}[H]
+\centering
+\makebox[\textwidth][c]{
+\includegraphics[scale=0.55]{./images/exercise5.png}
+}
+\end{figure}
 
 
 
