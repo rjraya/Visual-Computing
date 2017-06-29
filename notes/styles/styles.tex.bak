@@ -135,7 +135,7 @@ One of the examples of the ambient device technology is Ambient Orb, introduced 
 
 \subsection{Final thoughts}
 
-Often, interfaces are said to be intuitive. However, we all have to learn how things work. The fact that we think that an interface is intuitive is more related with the fact hat we forget that we have learnt it. To properly asses the quality of a good interface one has to measure:
+Often, interfaces are said to be intuitive. However, we all have to learn how things work. The fact that we think that an interface is intuitive is more related with the fact hat \textbf{we forget that we have learnt it}. To properly asses the quality of a good interface one has to measure:
 
 \begin{itemize}
 \item the learning curve

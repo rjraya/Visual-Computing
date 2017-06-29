@@ -155,7 +155,7 @@ Edge detection remains an open problem:
 
 \begin{itemize}
 \item Convolution operators respond to steep smooth shading.
-\item Parametric matchers tend to reject non ideal edges.
+\item Parametric matchers tend to reject non ideal edges.(A guided tour of computer vision, Nalwa).
 \item Arbitrary thresholds and scale sizes are required.
 \item Learning-based methods need exhaustive databases.
 \end{itemize}

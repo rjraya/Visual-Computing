@@ -26,7 +26,7 @@ Calibration: on associe le centre de la pupille \`a des points distribu\'es  sur
 
 La pr\'ecision est une valeur tr\`es controvers\'ee qui d\'epend de la distance de l'utilisateur, de ses mouvements, des conditions d'\'eclairage,....
 
-La pr\'ecision d'un eye tracker est d'environ 1/10 \`eme de la vision fov\'eale. En gros, on est capable de d\'etecter \textbf{quel caract\`ere est lu.
+La pr\'ecision d'un eye tracker est d'environ 1/10 \`eme de la vision fov\'eale. En gros, on est capable de d\'etecter \textbf{quel caract\`ere est lu}.
 
 On peut am\'eliorer la précision par la post-calibration, c'est-\`a-dire mettre a posteriori en correspondance les \'el\'ements regardables et les positions du regard.
 \end{itemize}
@@ -34,7 +34,7 @@ On peut am\'eliorer la précision par la post-calibration, c'est-\`a-dire mettre
 Les mouvements oculaires sont-ils si rapides?
 
 \begin{itemize}
-\item Fixations: 120 - 1000 ms. En général entre 200 et 600. R\'ep\'et\'e 3 fois par seconde.
+\item Fixations: 120 - 1000 ms. En g\'en\'eral entre 200 et 600. R\'ep\'et\'e 3 fois par seconde.
 \item Saccades: sauts rapides de l'oeil entre 40 et 120 ms. Nous sommes aveugles pendant ces moments.
 \end{itemize}
 

@@ -1,66 +1,116 @@
 \select@language {british}
-\contentsline {section}{\numberline {1}Interaction paradigms}{2}
-\contentsline {subsection}{\numberline {1.1}Command lines}{3}
-\contentsline {subsection}{\numberline {1.2}WIMP (Windows, icons, menus and pointers)}{3}
-\contentsline {subsection}{\numberline {1.3}Direct manipulation interface}{4}
-\contentsline {subsection}{\numberline {1.4}Form filling}{4}
-\contentsline {subsection}{\numberline {1.5}Experiment with the four previous paradigms}{4}
-\contentsline {subsection}{\numberline {1.6}Virtual reality}{4}
-\contentsline {subsection}{\numberline {1.7}Tangible interaction}{6}
-\contentsline {subsection}{\numberline {1.8}Augmented reality}{6}
-\contentsline {subsection}{\numberline {1.9}Difference between virtual reality and augmented reality}{6}
-\contentsline {subsection}{\numberline {1.10}Voice command devices}{6}
-\contentsline {subsection}{\numberline {1.11}Gesture control}{7}
-\contentsline {subsection}{\numberline {1.12}Brain–computer interface}{7}
-\contentsline {subsection}{\numberline {1.13}Bionic interfaces}{7}
-\contentsline {subsection}{\numberline {1.14}Wearables interfaces}{7}
-\contentsline {subsection}{\numberline {1.15}Interaction ambient}{8}
-\contentsline {subsection}{\numberline {1.16}Final thoughts}{8}
-\contentsline {subsection}{\numberline {1.17}Exercises}{9}
-\contentsline {section}{\numberline {2}Introduction to Computer Graphics}{9}
-\contentsline {subsection}{\numberline {2.1}Modeling}{10}
-\contentsline {subsection}{\numberline {2.2}Rendering}{11}
-\contentsline {subsubsection}{\numberline {2.2.1}Visibility}{11}
-\contentsline {subsubsection}{\numberline {2.2.2}Shading and materials}{13}
-\contentsline {subsection}{\numberline {2.3}Exercises}{14}
-\contentsline {section}{\numberline {3}Vision humaine}{15}
-\contentsline {subsection}{\numberline {3.1}Structure de l'oeil}{15}
-\contentsline {subsection}{\numberline {3.2}Effets visuels}{18}
-\contentsline {subsubsection}{\numberline {3.2.1}L'effet Stroop}{18}
-\contentsline {subsubsection}{\numberline {3.2.2}Perception du mouvement}{19}
-\contentsline {subsubsection}{\numberline {3.2.3}Perception de l'amor\c {c}age}{20}
-\contentsline {subsubsection}{\numberline {3.2.4}Perception de la profondeur}{22}
-\contentsline {subsubsection}{\numberline {3.2.5}Recréer la profondeur en 2D}{23}
-\contentsline {subsection}{\numberline {3.3}Remarques}{23}
-\contentsline {subsection}{\numberline {3.4}Exercises}{24}
-\contentsline {section}{\numberline {4}Cognition humaine}{24}
-\contentsline {section}{\numberline {5}Visualisation de l'information}{26}
-\contentsline {subsection}{\numberline {5.1}Grammaire visuelles}{26}
-\contentsline {subsection}{\numberline {5.2}Principes de conception (Tufte)}{27}
-\contentsline {subsection}{\numberline {5.3}Distorsions g\'eom\'etriques}{27}
-\contentsline {subsection}{\numberline {5.4}Erreurs fr\'equents dans la conception ou interpr\'etation des visualisations}{28}
-\contentsline {subsection}{\numberline {5.5}Exercises}{29}
-\contentsline {section}{\numberline {6}M\'ecanismes des jeux}{30}
-\contentsline {subsection}{\numberline {6.1}17 "Game Mechanics"}{30}
-\contentsline {subsubsection}{\numberline {6.1.1}L'espace}{30}
-\contentsline {subsubsection}{\numberline {6.1.2}Le temps}{31}
-\contentsline {subsubsection}{\numberline {6.1.3}Les objets}{31}
-\contentsline {subsubsection}{\numberline {6.1.4}Actions}{31}
-\contentsline {subsubsection}{\numberline {6.1.5}R\`egles}{32}
-\contentsline {subsubsection}{\numberline {6.1.6}Modes}{32}
-\contentsline {subsubsection}{\numberline {6.1.7}Skills}{33}
-\contentsline {subsubsection}{\numberline {6.1.8}La chance}{33}
-\contentsline {subsubsection}{\numberline {6.1.9}Points de vue ou position de la cam\'era}{33}
-\contentsline {subsubsection}{\numberline {6.1.10}Vue}{33}
-\contentsline {subsubsection}{\numberline {6.1.11}Roles}{34}
-\contentsline {subsubsection}{\numberline {6.1.12}Secrets}{34}
-\contentsline {subsubsection}{\numberline {6.1.13}Collaboration ou comp\'etition}{34}
-\contentsline {subsubsection}{\numberline {6.1.14}Mod\'elisation mutuelle}{34}
-\contentsline {subsubsection}{\numberline {6.1.15}Spectateurs}{34}
-\contentsline {subsubsection}{\numberline {6.1.16}Triangularity}{34}
-\contentsline {subsubsection}{\numberline {6.1.17}\'Echapper \`a la r\'ealit\'e}{34}
-\contentsline {subsubsection}{\numberline {6.1.18}Scoreboard ou analytics}{34}
-\contentsline {subsubsection}{\numberline {6.1.19}Gamification}{34}
-\contentsline {subsubsection}{\numberline {6.1.20}Le flow}{35}
-\contentsline {subsubsection}{\numberline {6.1.21}Motivation}{36}
-\contentsline {subsubsection}{\numberline {6.1.22}Exercises}{37}
+\select@language {british}
+\contentsline {section}{\numberline {1}Foreword}{4}
+\contentsline {section}{\numberline {2}Interaction paradigms}{5}
+\contentsline {subsection}{\numberline {2.1}Command lines}{5}
+\contentsline {subsection}{\numberline {2.2}WIMP (Windows, icons, menus and pointers)}{5}
+\contentsline {subsection}{\numberline {2.3}Direct manipulation interface}{6}
+\contentsline {subsection}{\numberline {2.4}Form filling}{6}
+\contentsline {subsection}{\numberline {2.5}Experiment with the four previous paradigms}{6}
+\contentsline {subsection}{\numberline {2.6}Virtual reality}{7}
+\contentsline {subsubsection}{\numberline {2.6.1}Immersive simulation}{7}
+\contentsline {subsubsection}{\numberline {2.6.2}Influence on the users}{7}
+\contentsline {subsubsection}{\numberline {2.6.3}Haptic devices}{7}
+\contentsline {subsection}{\numberline {2.7}Augmented reality}{8}
+\contentsline {subsection}{\numberline {2.8}Difference between virtual reality and augmented reality}{8}
+\contentsline {subsection}{\numberline {2.9}Tangible interaction}{8}
+\contentsline {subsection}{\numberline {2.10}Voice command devices}{9}
+\contentsline {subsection}{\numberline {2.11}Gesture control}{9}
+\contentsline {subsection}{\numberline {2.12}Brain\IeC {\textendash }computer interface}{9}
+\contentsline {subsection}{\numberline {2.13}Bionic interfaces}{9}
+\contentsline {subsection}{\numberline {2.14}Wearables interfaces}{10}
+\contentsline {subsection}{\numberline {2.15}Interaction ambient}{10}
+\contentsline {subsection}{\numberline {2.16}Final thoughts}{10}
+\contentsline {subsection}{\numberline {2.17}Exercises}{11}
+\contentsline {section}{\numberline {3}Introduction to Computer Graphics}{11}
+\contentsline {subsection}{\numberline {3.1}Modeling}{12}
+\contentsline {subsection}{\numberline {3.2}Rendering}{12}
+\contentsline {subsubsection}{\numberline {3.2.1}Visibility}{13}
+\contentsline {subsubsection}{\numberline {3.2.2}Shading and materials}{15}
+\contentsline {subsection}{\numberline {3.3}Exercises}{16}
+\contentsline {section}{\numberline {4}Vision humaine}{16}
+\contentsline {subsection}{\numberline {4.1}Structure de l'oeil}{16}
+\contentsline {subsection}{\numberline {4.2}L'effet Stroop}{19}
+\contentsline {subsection}{\numberline {4.3}Perception du mouvement}{20}
+\contentsline {subsubsection}{\numberline {4.3.1}Hypoth\`ese 1: persistence r\'etinienne}{20}
+\contentsline {subsubsection}{\numberline {4.3.2}Hypoth\`ese 2: effet phi et effet beta}{21}
+\contentsline {subsection}{\numberline {4.4}Perception de l'amor\c {c}age}{21}
+\contentsline {subsection}{\numberline {4.5}Perception de la profondeur}{23}
+\contentsline {subsubsection}{\numberline {4.5.1}Indices binoculaires}{23}
+\contentsline {subsubsection}{\numberline {4.5.2}Indices monoculaires}{23}
+\contentsline {subsection}{\numberline {4.6}Recr\'eer la profondeur en 2D}{24}
+\contentsline {subsection}{\numberline {4.7}Remarques}{25}
+\contentsline {subsection}{\numberline {4.8}Exercises}{25}
+\contentsline {section}{\numberline {5}Cognition humaine}{26}
+\contentsline {subsection}{\numberline {5.1}Split attention effect}{28}
+\contentsline {subsection}{\numberline {5.2}Distributed cognition}{28}
+\contentsline {subsection}{\numberline {5.3}Metacognition}{29}
+\contentsline {subsection}{\numberline {5.4}Exercises}{30}
+\contentsline {section}{\numberline {6}Visualisation de l'information}{30}
+\contentsline {subsection}{\numberline {6.1}Grammaire visuelles}{31}
+\contentsline {subsection}{\numberline {6.2}Principes de conception (Tufte)}{31}
+\contentsline {subsection}{\numberline {6.3}Distorsions g\'eom\'etriques}{32}
+\contentsline {subsection}{\numberline {6.4}Erreurs fr\'equents dans la conception ou interpr\'etation des visualisations}{32}
+\contentsline {subsection}{\numberline {6.5}Exercises}{34}
+\contentsline {section}{\numberline {7}M\'ecanismes des jeux}{34}
+\contentsline {subsection}{\numberline {7.1}17 "Game Mechanics"}{35}
+\contentsline {subsubsection}{\numberline {7.1.1}L'espace}{35}
+\contentsline {subsubsection}{\numberline {7.1.2}Le temps}{35}
+\contentsline {subsubsection}{\numberline {7.1.3}Les objets}{35}
+\contentsline {subsubsection}{\numberline {7.1.4}Actions}{36}
+\contentsline {subsubsection}{\numberline {7.1.5}R\`egles}{36}
+\contentsline {subsubsection}{\numberline {7.1.6}Modes}{36}
+\contentsline {subsubsection}{\numberline {7.1.7}Skills}{37}
+\contentsline {subsubsection}{\numberline {7.1.8}La chance}{37}
+\contentsline {subsubsection}{\numberline {7.1.9}Points de vue ou position de la cam\'era}{37}
+\contentsline {subsubsection}{\numberline {7.1.10}Vue}{38}
+\contentsline {subsubsection}{\numberline {7.1.11}Roles}{38}
+\contentsline {subsubsection}{\numberline {7.1.12}Secrets}{38}
+\contentsline {subsubsection}{\numberline {7.1.13}Collaboration ou comp\'etition}{38}
+\contentsline {subsubsection}{\numberline {7.1.14}Mod\'elisation mutuelle}{38}
+\contentsline {subsubsection}{\numberline {7.1.15}Spectateurs}{39}
+\contentsline {subsubsection}{\numberline {7.1.16}Triangularity}{39}
+\contentsline {subsubsection}{\numberline {7.1.17}\'Echapper \`a la r\'ealit\'e}{39}
+\contentsline {subsubsection}{\numberline {7.1.18}Scoreboard ou analytics}{39}
+\contentsline {subsubsection}{\numberline {7.1.19}Gamification}{39}
+\contentsline {subsubsection}{\numberline {7.1.20}Le flow}{40}
+\contentsline {subsubsection}{\numberline {7.1.21}Motivation}{41}
+\contentsline {subsubsection}{\numberline {7.1.22}Exercises}{42}
+\contentsline {section}{\numberline {8}Edge detection}{42}
+\contentsline {subsection}{\numberline {8.1}Generalities}{42}
+\contentsline {subsection}{\numberline {8.2}Edge detection}{43}
+\contentsline {subsubsection}{\numberline {8.2.1}Gradient based}{43}
+\contentsline {subsubsection}{\numberline {8.2.2}Convolution based}{44}
+\contentsline {subsubsection}{\numberline {8.2.3}Example: Canny edge detector}{44}
+\contentsline {subsubsection}{\numberline {8.2.4}Example: Tracking using occluding contours}{46}
+\contentsline {subsubsection}{\numberline {8.2.5}Learning-based edge detection}{46}
+\contentsline {section}{\numberline {9}Shape and blob detection}{47}
+\contentsline {subsection}{\numberline {9.1}Parametric shape detection}{47}
+\contentsline {subsubsection}{\numberline {9.1.1}Applications}{47}
+\contentsline {subsubsection}{\numberline {9.1.2}Hough for lines}{47}
+\contentsline {subsubsection}{\numberline {9.1.3}Other Hough (circle, ellipse, general)}{48}
+\contentsline {subsubsection}{\numberline {9.1.4}Limitations}{48}
+\contentsline {subsection}{\numberline {9.2}Blob detection}{48}
+\contentsline {subsubsection}{\numberline {9.2.1}Connected components algorithm}{49}
+\contentsline {subsubsection}{\numberline {9.2.2}Limitations}{49}
+\contentsline {subsection}{\numberline {9.3}Other approaches}{49}
+\contentsline {subsection}{\numberline {9.4}Summary}{49}
+\contentsline {subsection}{\numberline {9.5}Exercises}{50}
+\contentsline {section}{\numberline {10}Usability}{50}
+\contentsline {subsection}{\numberline {10.1}Comment savoir si l'interface est bien con\c {c}ue?}{50}
+\contentsline {subsubsection}{\numberline {10.1.1}8 golden rules de Ben Schneiderman}{50}
+\contentsline {subsubsection}{\numberline {10.1.2}10 usability heuristics de Jakob Nielsen}{51}
+\contentsline {subsubsection}{\numberline {10.1.3}6 design principles de Don Norman}{51}
+\contentsline {subsubsection}{\numberline {10.1.4}Deux probl\`emes}{52}
+\contentsline {subsubsection}{\numberline {10.1.5}La solution}{52}
+\contentsline {subsubsection}{\numberline {10.1.6}Prototypage}{52}
+\contentsline {subsubsection}{\numberline {10.1.7}Testing}{52}
+\contentsline {subsection}{\numberline {10.2}Comment savoir si une interface de type X est plus efficace que une interface de type Y?}{53}
+\contentsline {section}{\numberline {11}Eye tracking}{56}
+\contentsline {subsection}{\numberline {11.1}Generalities}{56}
+\contentsline {subsection}{\numberline {11.2}Applications}{58}
+\contentsline {subsection}{\numberline {11.3}Exercises}{60}
+\contentsline {section}{\numberline {12}Homography and projection matrix}{60}
+\contentsline {subsection}{\numberline {12.1}Pinhole camera model}{60}
+\contentsline {subsection}{\numberline {12.2}Notions of projective geometry}{61}
+\contentsline {subsection}{\numberline {12.3}Uses of homography}{62}
