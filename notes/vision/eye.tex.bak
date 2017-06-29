@@ -11,7 +11,7 @@ In 1980, Just and Carpenter formulated the influential \textbf{Strong eye-mind h
 Comment mesurer la position de l'oeil?
 
 \begin{itemize}
-\item Electro-oculogramme: la r\'etine est charg\'ee n\'egative et la corn\'ee positivement. La diff\'erence de potentiel indique la direction. Ceci fonctionne aussi yeux ferm\'es, par exemple pour l'\'etude du sommeil.
+\item \textbf{Electro-oculogramme}: la r\'etine est charg\'ee n\'egative et la corn\'ee positivement. La diff\'erence de potentiel indique la direction. Ceci fonctionne aussi yeux ferm\'es, par exemple pour l'\textbf{\'etude du sommeil}.
 
 \begin{figure}[H]
 \centering
@@ -20,13 +20,13 @@ Comment mesurer la position de l'oeil?
 }
 \end{figure}
 
-\item M\'ethodes optiques: on projette une lumière infrarouge sur l'oeil. Ceci augmente le contraste pupille-iris. La lumi\`ere se refl\`ete sur la r\'etine et illumine la pupille si l'orientation de l'oeil est coaxiale \`a la cam\'era, moins si l'oeil s'\'eloigne de l'axe. 
+\item \textbf{M\'ethodes optiques}: on projette une lumière infrarouge sur l'oeil. Ceci augmente le contraste \textbf{pupille-iris}. La lumi\`ere se refl\`ete sur la r\'etine et illumine la pupille si l'orientation de l'oeil est coaxiale \`a la cam\'era, moins si l'oeil s'\'eloigne de l'axe. 
 
 Calibration: on associe le centre de la pupille \`a des points distribu\'es  sur l'\'ecran. Des cam\'eras d\'etectent la r\'eflexion sur la corn\'ee (GLINT), lesquelles indiquent la position de la t\^ete vis-\`a-vis de la cam\'era.
 
 La pr\'ecision est une valeur tr\`es controvers\'ee qui d\'epend de la distance de l'utilisateur, de ses mouvements, des conditions d'\'eclairage,....
 
-La pr\'ecision d'un eye tracker est d'environ 1/10 \`eme de la vision fov\'eale. En gros, on est capable de d\'etecter quel caract\`ere est lu.
+La pr\'ecision d'un eye tracker est d'environ 1/10 \`eme de la vision fov\'eale. En gros, on est capable de d\'etecter \textbf{quel caract\`ere est lu.
 
 On peut am\'eliorer la précision par la post-calibration, c'est-\`a-dire mettre a posteriori en correspondance les \'el\'ements regardables et les positions du regard.
 \end{itemize}

@@ -1,6 +1,6 @@
 Although computer graphics is a vast field that encompasses almost any graphical aspect, we are mainly 
 interested in the generation of images of 3-dimensional scenes. Computer imagery has applications for film 
-special effects, simulation and training, games, medical imagery, flying logos, etc.
+special effects, simulation, training, games, medical imagery, flying logos, etc.
 
 Computer  graphics  relies  on  an  internal \textbf{model} (modeling) of  the  scene, that  is,  a  mathematical representation suitable  for  graphical  computations. The  model  describes  the  3D:
 
@@ -19,22 +19,20 @@ the \textbf{rendering} step.  Rendering  involves:
 \item computing their appearance and lighting interactions
 \end{itemize} 
 
-Finally, for animated sequence, the motion of objects has to be specified. We will not discuss animation 
-in this document.  
+Finally, for animated sequence, the motion of objects has to be specified. We will not discuss \textbf{animation} in this document.  
 
 \subsection{Modeling}
 
 We introduce how the geometry of the scene is represented in the memory of the computer. 
 
-The most classical method for modeling 3D geometry is the use of polygons. An object is approximated by a polygonal mesh, that is a set of connected polygons. Most of the time, triangles are used for simplicity and generality.
+The most classical method for modeling 3D geometry is the use of polygons. An object is approximated by a \textbf{polygonal mesh}, that is a set of connected polygons. Most of the time, triangles are used for simplicity and generality.
 
-Each polygon or triangle can be described by the 3D coordinates of its list of vertices. The  obvious limitation  of  triangles  is  that  they  produce  a  flat  and  geometric  appearance.  However,  techniques called smoothing  or interpolation can greatly improve this.
+Each polygon or triangle can be described by the 3D coordinates of its list of vertices. The  obvious limitation  of  triangles  is  that  they  produce  a  flat  and  geometric  appearance.  However,  techniques called 	textbf{smoothing  or interpolation} can greatly improve this.
 
 The most classical geometric entities can be directly used as primitives, e.g. cubes, cylinders, spheres and 
 cones. A sphere for example can be simply described by the coordinates of its center and its radius.
 
-More  complex  mathematical  entities  permit  the  representation  of  complex  smooth  objects.  Spline 
-patches  and  NURBS  are  the  most  popular. They  are  however  harder  to  manipulate  since  one  does  not directly  control  the  surface  but  so  called control points that are only indirectly related to the final shape. Moreover, obtaining smooth junctions between different patches can be problematic. However, the recently popular subdivision surfaces overcome this limitation. They offer the best of both worlds and provide the simplicity of polygons and the smoothness of patches.
+More  complex  mathematical  entities  permit  the  representation  of  complex  smooth  objects.  \textbf{Spline patches  and  NURBS}  are  the  most  popular. They  are  however  harder  to  manipulate  since  one  does  not directly  control  the  surface  but  so  called control points that are only indirectly related to the final shape. Moreover, obtaining smooth junctions between different patches can be problematic. However, the recently popular subdivision surfaces overcome this limitation. They offer the best of both worlds and provide the simplicity of polygons and the smoothness of patches.
 
 \subsection{Rendering}
 
@@ -54,7 +52,7 @@ For  richer  rendering,  the  color  of  each rasterized pixel must take into ac
 
 \subsubsection{Visibility}
 
-If the scene contains more than one object, occlusions may occur. That is, some objects may be hidden by others. Only visible objects should be represented. Visibility techniques deal with this issue. One classical algorithm that solves the visibility problem is the so-called painter’s algorithm.
+If the scene contains more than one object, \textbf{occlusions} may occur. That is, some objects may be hidden by others. Only visible objects should be represented. Visibility techniques deal with this issue. One classical algorithm that solves the visibility problem is the so-called \textbf{painter's algorithm}.
 
 It consists in  sorting  the  objects  or  polygons  from  back  to  front  and  rasterizing  them  in  this  order.  This  way,  front-most polygons cover the more distant polygons that they hide. 
 
@@ -74,17 +72,17 @@ The \textbf{ray-tracing} algorithm does not use a rasterization phase. It sends 
 }
 \end{figure}
 
-The z-buffer method is the most common nowadays (e.g. for computer graphics cards). It stores the depth (z) of each pixel. When a new polygon is rasterized, for each pixel, the algorithm compares the depth of the current polygon and the depth of the pixel. If the new polygon has a closer depth, the color and depth of the pixel  are  updated.  Otherwise,  it  means  that  for  this  pixel,  a  formerly  drawn  polygon  hides  the  current polygon.
+The \textbf{z-buffer method} is the most common nowadays (e.g. for computer graphics cards). It stores the depth (z) of each pixel. When a new polygon is rasterized, for each pixel, the algorithm compares the depth of the current polygon and the depth of the pixel. If the new polygon has a closer depth, the color and depth of the pixel  are  updated.  Otherwise,  it  means  that  for  this  pixel,  a  formerly  drawn  polygon  hides  the  current polygon.
 
 \subsubsection{Shading and materials}
 
 Augmenting  the  scene  with  light  sources  allows  for  better  rendering.  The  objects  can  be  
-shaded according to their interaction with light. Various shading models have been proposed in the literature. They describe how light is reflected by object, depending on the relative orientation of the surface, light source and viewpoint.
+shaded according to their interaction with light. Various \textbf{shading models} have been proposed in the literature. They describe how light is reflected by object, depending on the relative orientation of the surface, light source and viewpoint.
 
 Texture  mapping uses  2D  images  that  are  mapped  on  the  3D  models  to  improve  their  appearance.
 
 Shading and material models only take into account the local interaction of surfaces and light. They do 
-not simulate shadows that  are  harder  to  handle  because  they  imply  long-range interactions. A shadow is caused by the occlusion of light by one object. Ray-tracing,  for  example,  can  handle  shadows,  but  requires  a  shadow  computation  for  each  pixel  and  each  light  source.  A  shadow ray is sent from the visible point to the light source. If the ray intersects an object, then the visible point is in shadow.
+not simulate shadows that  are  harder  to  handle  because  they  imply  long-range interactions. A shadow is caused by the occlusion of light by one object. \textbf{Ray-tracing},  for  example,  can  handle  shadows,  but  requires  a  shadow  computation  for  each  pixel  and  each  light  source.  A  shadow ray is sent from the visible point to the light source. If the ray intersects an object, then the visible point is in shadow.
 
 \begin{figure}[H]
 \centering
@@ -93,15 +91,14 @@ not simulate shadows that  are  harder  to  handle  because  they  imply  long-r
 }
 \end{figure}  
 
-More complex lighting interactions can then be simulated. In particular, objects that are illuminated by a 
-primary light  source  reflect  light  and  produce indirect  lighting.  This  is  particularly  important  for  indoor scenes. Global lighting methods take into account all light inter-reflections within the scene.
+More complex lighting interactions can then be \textbf{simulated}. In particular, objects that are illuminated by a primary light  source  reflect  light  and  produce indirect  lighting.  This  is  particularly  important  for  indoor scenes. Global lighting methods take into account all light inter-reflections within the scene.
 
 Rendering can be classified in three categories:
 
 \begin{itemize}
-\item Non-photorealistic: rendering of scenes in an artistic style, intended to look like a painting or drawing.
-\item Photorealistic: rendering of scenes intended to look like indistinguishable from a photo.
-\item Physically based: rendering in a way that more accurately models the flow of light in the real world. 
+\item \textbf{Non-photorealistic}: rendering of scenes in an artistic style, intended to look like a painting or drawing.
+\item \textbf{Photorealistic}: rendering of scenes intended to look like indistinguishable from a photo.
+\item \textbf{Physically based}: rendering in a way that more accurately models the flow of light in the real world. 
 \end{itemize}
 
 See: \url{http://people.csail.mit.edu/fredo/Depiction/1_Introduction/reviewGraphics.pdf}

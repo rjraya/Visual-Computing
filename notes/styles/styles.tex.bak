@@ -9,21 +9,21 @@ Initial interfaces were command-line interfaces where a user sits in front of a 
 The WIMP paradigm relies on Windows, Icons, Menus and Pointers to interact with the user.  
 
 \begin{itemize}
-\item A window runs a self-contained program, isolated from other programs that (if in a multi-programmed operating system) run at the same time in other windows.
-\item An icon acts as a shortcut to an action the computer performs (e.g., execute a program or task).
-\item A menu is a text or icon-based selection system that selects and executes programs or tasks.
-\item The pointer is an on-screen symbol that represents movement of a physical device that the user controls to select icons, data elements, etc.
+\item A \textbf{window} runs a self-contained program, isolated from other programs that (if in a multi-programmed operating system) run at the same time in other windows.
+\item An \textbf{icon} acts as a shortcut to an action the computer performs (e.g., execute a program or task).
+\item A \textbf{menu} is a text or icon-based selection system that selects and executes programs or tasks.
+\item The \textbf{pointer} is an on-screen symbol that represents movement of a physical device that the user controls to select icons, data elements, etc.
 \end{itemize}
 
 Post-WIMP comprises work on user interfaces, mostly graphical user interfaces, which attempt to go beyond this paradigm.
 
-The reason WIMP interfaces have become so prevalent is that they are very good at abstracting work-spaces, documents and their actions. Their analogous paradigm to documents as paper sheets or folders makes WIMP interfaces easy to introduce to other users. 
+The reason WIMP interfaces have become so prevalent is that they are very \textbf{good at abstracting work-spaces}, documents and their actions. Their analogous paradigm to documents as paper sheets or folders makes WIMP interfaces easy to introduce to other users. 
 
-However, WIMP interfaces are not optimal for working with complex tasks such as showing 3D models (computer-aided design), working on large amounts of data simultaneously (interactive games) or simply portraying an interaction for which there is no defined standard widget. WIMPs are usually pixel-hungry, so given limited screen real estate they can distract attention from the task at hand.  
+However, WIMP interfaces are \textbf{not optimal for working with complex tasks} such as showing 3D models (computer-aided design), working on large amounts of data simultaneously (interactive games) or simply portraying an interaction for which there is no defined standard widget. WIMPs are usually \textbf{pixel-hungry}, so given limited screen real estate they can distract attention from the task at hand.  
 
 \subsection{Direct manipulation interface}
 
-It was introduced in the context of the creation of office applications and the desktop metaphor. It involves continuous representation of objects providing actions that are rapid, reversible, incremental and with feedback. These actions should correspond to manipulation of physical objects. Example: resizing a graphical shape by dragging its corners or edges with a mouse or doing a drag-n-drop to delete a file.
+It was introduced in the context of the creation of office applications and the desktop metaphor. It involves continuous representation of objects providing actions that are \textbf{rapid, reversible, incremental and with feedback}. These actions should correspond to \textbf{manipulation of physical objects}. Example: resizing a graphical shape by dragging its corners or edges with a mouse or doing a drag-n-drop to delete a file.
 
 Benefits: can make it easier for a user to learn and use an interface, having rapid, incremental feedback allows a user to make fewer errors and complete tasks in less time.
 
@@ -35,10 +35,21 @@ It is preferred for bureaucratic and routine tasks. Introduces the notion of obl
 
 The experiment that can be found \url{http://cs211labs.epfl.ch} does a simulation of the purchase of five tickets in each of the four previous interaction modes. The conclusion is that the best paradigm depends on the task, the user and the details of the design. 
 
-Depending of the degree of use of the tool we can have a beginner, an intermediate or an expert user. A beginner user will only retain the aspects of the task that he needs to know in the real world without using a computer. The intermediate user will also know more advanced features that help to do the translation of the task from the real world to the computer. Finally, the expert user master aspects inherent to the computer program itself that don't have to do with the task itself.
+Depending of the degree of use of the tool we can have:
 
-Example: if we take OpenOffice Word, the beginner should know that he needs an index, an introduction and a body for writing an essay. The intermediate user will know that in order to structure the body of his essay he needs to structure the text in paragraphs and can set the parameters to separate paragraphs and set its style. Finally, the expert user will master where are the options set in the application or what is the formal languages used for specific actions.
+\begin{itemize}
+\item Beginner: retains aspects of task of the real world without computer.
+\item Intermediate: advanced features that translate the task from the real world to the computer.
+\item Expert: aspects of computer program that don't have to do with the task itself.
+\end{itemize}
 
+Example: if we take OpenOffice Word, 
+
+\begin{itemize}
+\item Beginner: to write an essay one needs an index, an introduction and a body.
+\item Intermediate: to structure the body of the essay one needs to separate the text in paragraphs with convenient parameters.
+\item Expert: knows where one has to find the different options or how we call specific actions.
+\end{itemize}
 
 \subsection{Virtual reality}
 
@@ -46,21 +57,40 @@ Computer interactive simulation using sound and visual effects corresponding to 
 
 Examples: Minecraft (characters represented by avatars although the world is not real), eye surgery learning.
 
-An interactive computer simulation is immersive if the user receives similar stimulus to the ones he would receive in the environment that is being simulated. The stimulus can be in all senses: sight, smell, touch or sound.
+\subsubsection{Immersive simulation}
 
-Examples: a cave automatic virtual environment (CAVE) is an immersive virtual reality environment where video projectors are directed to between three and six of the walls of a room-sized cube. CAVE is typically a video theater situated within a larger room. The user wears 3D glasses inside the CAVE to see 3D graphics generated by it. People using the CAVE can see objects apparently floating in the air, and can walk around them, getting a proper view of what they would look like in reality. A CAVE user's movements are tracked by the sensors typically attached to the 3D glasses and the video continually adjusts to retain the viewers perspective.
+An interactive computer simulation is \textbf{immersive} if the user receives similar stimulus (sight, smell, touch or sound) to the ones he would receive in the environment that is being simulated. 
 
-A question remains to be answered. Do these virtual reality experiences really influence the users as the real world does. Several experiments have been conducted in this sense, measuring physiological and cognitive responses. For instance, virtual  reality  users  hearts  have  pumped intensely  while  crossing  a  virtual pit (walking through a piece of wood surrounded by virtual cliffs. 
+Examples: a cave automatic virtual environment (CAVE) is an immersive virtual reality environment where video projectors are directed to between three and six of the walls of a room-sized cube. CAVE is typically a video theatre situated within a larger room. The user wears 3D glasses inside the CAVE to see 3D graphics generated by it. People using the CAVE can see objects apparently floating in the air, and can walk around them, getting a proper view of what they would look like in reality. A CAVE user's movements are tracked by the sensors typically attached to the 3D glasses and the video continually adjusts to retain the viewers perspective.
 
-Difference haptics (related to the touch sense) devices has been implemented. The give the sensation of touch by applying forces (force feedback) or vibrations to the movements of users. This needs the presence of sensors for measuring the forces applied by the user. The user can then feel the specific resistance, elasticity or rugosity of the surface
+\subsubsection{Influence on the users}
+
+A question remains to be answered. Do these virtual reality experiences really influence the users as the real world does?. Several experiments have been conducted in this sense, measuring physiological and cognitive responses. For instance, virtual  reality  users  hearts  have  pumped intensely  while  crossing  a  virtual pit (walking through a piece of wood surrounded by virtual cliffs). 
+
+\subsubsection{Haptic devices}
+
+Different \textbf{haptic} (related to the touch sense) \textbf{devices} has been implemented. They give the sensation of touch by applying forces (force feedback) or vibrations to the movements of users. This needs the presence of sensors for measuring the forces applied by the user. The user can then feel the specific resistance, elasticity or rugosity of the surface.
 
 Applications:  surgery simulations, bass shakers vibrations in cinemas. 
 
-A particularly interesting applications is a data glove or wired glove. It is an input device for human-computer interaction worn like a glove. Various sensor technologies are used to capture physical data such as bending of fingers. Often a motion tracker, such as a magnetic tracking device or inertial tracking device, is attached to capture the global position/rotation data of the glove. 
+A particularly interesting application is a \textbf{data glove or wired glove}. It is an input device for human-computer interaction worn like a glove. Various sensor technologies are used to capture physical data such as bending of fingers. Often a motion tracker, such as a magnetic tracking device or inertial tracking device, is attached to capture the global position/rotation data of the glove. 
 
 These movements are then interpreted by the software that accompanies the glove, so any one movement can mean any number of things. Gestures can then be categorized into useful information, such as to recognize sign language or other symbolic functions.
 
 Expensive high-end wired gloves can also provide haptic feedback, which is a simulation of the sense of touch. This allows a wired glove to also be used as an output device. Wired gloves are often used in virtual reality environments and to mimic human hand movement by robots.
+
+
+\subsection{Augmented reality}
+
+Augmented reality (AR) , is a live direct or indirect view of a physical, real-world environment whose elements are augmented by computer-generated sensory input such as sound, video, graphics or GPS data. Augmentation techniques are typically performed in \textbf{real-time}, that is, there are time limits that must be met. To this real setting one normally adds supplemental information like scores over a live video feed of a sporting event.
+
+There are several hardware instruments that can be used to this goal. Using transparencies such as glasses or projections. We can even have interactive surfaces where we should ask ourselves whether is better to project from the upside or from the downside. A special characteristic of this surfaces is whether they are \textbf{multi-touch} or not. Multi-touch means that we can recognize the presence of more than one or more than two points of contact with the surface.
+
+\subsection{Difference between virtual reality and augmented reality}
+
+Virtual reality offers a digital recreation of a real life setting, while augmented reality delivers virtual elements as an overlay to the real world. 
+
+Augmented reality is a type of virtual reality technology that blends what the user sees in their real surroundings with digital content generated by computer software. The additional software-generated images with the virtual scene typically enhance how the real surroundings look in some way. 
 
 \subsection{Tangible interaction}
 
@@ -71,45 +101,35 @@ Tangible Interaction has come to be the 'umbrella term' used to describe a set o
 \item the objects employed are specific to the task at hand which can be the visit to a museum to learn about an specific topic or directed to children to learn programming. It is very usual that this physical environments are thought to be multi-user to enhance teamwork. 
 \end{itemize}
 
-\subsection{Augmented reality}
-
-Augmented reality (AR) , is a live direct or indirect view of a physical, real-world environment whose elements are augmented by computer-generated sensory input such as sound, video, graphics or GPS data. Augmented reality enhances one’s current perception of reality, whereas in contrast, virtual reality replaces the real world with a simulated one. Augmentation techniques are typically performed in real-time, that is, there are time limits that must be met, and in a semantic context with the addition to the environmental elements of overlaying supplemental information like scores over a live video feed of a sporting event.
-
-There are several hardware instruments that can be used to this goal. Using transparencies such as glasses or projections. We can even have interactive surfaces where we should ask ourselves whether is better to project from the upside or from the downside. A special characteristic of this surfaces is whether they are multi-touch or not. Multi-touch means that we can recognize the presence of more than one or more than two points of contact with the surface
-
-\subsection{Difference between virtual reality and augmented reality}
-
-Virtual reality offers a digital recreation of a real life setting, while augmented reality delivers virtual elements as an overlay to the real world. 
-
 \subsection{Voice command devices}
 
-These are interfaces that allow the user to communicate using its voice with the computer. A popular system for this is Siri. However, there is still a lot to do in human voice recognition to generalize these tools.  The level of precision depends on factors like the size of the vocabulary of the user, the environmental noise, the time that a particular user has been using it since Siri claims that it can learn with time or certain others semantic problems. There are also certain challenges in its usability.
+These are interfaces that allow the user to \textbf{communicate using its voice} with the computer. A popular system for this is Siri. However, there is still a lot to do in human voice recognition to generalize these tools.  The level of precision depends on factors like the size of the vocabulary of the user, the environmental noise, the time that a particular user has been using it since Siri claims that it can learn with time or certain others semantic problems. There are also certain challenges in its usability.
 
 \subsection{Gesture control}
 
-This interface is based in the recognition of human gestures. In EPFL, reseracher Frédéric Kaplan has developed such a system to simulate tennis games. Microsoft Kinect is also an examples. It enables users to control and interact with their console/computer without the need for a game controller, through a natural user interface using gestures and spoken commands.
+This interface is based in the \textbf{recognition of human gestures}. In EPFL, reseracher Fr\'ed\'eric Kaplan has developed such a system to simulate tennis games. Microsoft Kinect is also an example. It enables users to control and interact with their console/computer without the need for a game controller, through a natural user interface using gestures and spoken commands.
 
 \subsection{Brain–computer interface}
 
-These interfaces allow the communication of the user's brain activity to the computer. In EPFL, researchers have obtained results controlling a wheel-chair. The thoughts of the user activate specific brain patterns that are recorded by electroencephalography (EEG) using a helmet with electrodes. These patterns are then interpreted by a computer that transmits a command to the chair. Interestingly, it takes some time to the user of this systems to adapt their thoughts to the machines they use. It is a process of mutual apprenticeship between human and machine.
+These interfaces allow the \textbf{communication of the user's brain activity to the computer}. In EPFL, researchers have obtained results controlling a wheel-chair. The thoughts of the user activate specific brain patterns that are recorded by electroencephalography (EEG) using a helmet with electrodes. These patterns are then interpreted by a computer that transmits a command to the chair. Interestingly, it takes some time to the user of these systems to adapt their thoughts to the machines they use. It is a process of mutual apprenticeship between human and machine.
 
 \subsection{Bionic interfaces}
 
 Bionics is the application of biological methods and systems found in nature to the study and design of engineering systems and modern technology. Therefore a bionic interface is an interface that profits of this knowledge to communicate the user and the computer.
 
-An interesting experiment was carried out in EPFL by the team of Silvestro Mícera to make a bionic hand with which patients could adjust their force to take objects and identify their shape and texture. The prosthesis contained some sensors capable of reacting to the tension of artificial tendons at translating them into electric impulses. This electric signals could then be transmitted to the actual external nerves of the patient arm.
+An interesting experiment was carried out in EPFL by the team of Silvestro M\'icera to make a bionic hand with which patients could adjust their force to take objects and identify their shape and texture. The prosthesis contained some sensors capable of reacting to the tension of artificial tendons at translating them into electric impulses. This electric signals could then be transmitted to the actual external nerves of the patient arm.
 
 \subsection{Wearables interfaces}
 
 Wearable technology or wearables are electronic devices with microcontrollers that can be worn on the body as implants or accessories. The designs often incorporate practical functions and features.
 
-This can be used for instance for sousveillance, which is the recording of an activity by a participant in it by means of wearing certain objects. It has also been used in the fashion industry. CuteCircuit was the first fashion company offering smart textile-based garments that create an emotional experience for their wearers using smart textiles and micro electronics.
+This can be used for instance for \textbf{sousveillance}, which is the recording of an activity by a participant in it by means of wearing certain objects. It has also been used in the fashion industry. CuteCircuit was the first fashion company offering smart textile-based garments that create an emotional experience for their wearers using smart textiles and micro electronics.
 
 \subsection{Interaction ambient}
 
-The notion of ambient devices revolves around core concept of immediate access to information. The original developers of the idea (HYATT, ROSE, 2002) state that in the majority of cases an ambient device is designed to provide support to people in carrying out their everyday activities in an easy and natural way. An average person living in a modern society is being overloaded with abundance of information on a daily basis. Through the introduction of ambient devices into their day-to-day routine an individual gains an opportunity to decrease the amount of effort to process incoming data, thus rendering self more informed and productive (ROSE, 2002).
+The notion of ambient devices revolves around core concept of \textbf{immediate access to information}. The original developers of the idea (HYATT, ROSE, 2002) state that in the majority of cases an ambient device is designed to provide support to people in carrying out their everyday activities in an easy and natural way. An average person living in a modern society is being overloaded with abundance of information on a daily basis. Through the introduction of ambient devices into their day-to-day routine an individual gains an opportunity to decrease the amount of effort to process incoming data, thus rendering self more informed and productive (ROSE, 2002).
 
-The key issue lies within taking Internet-based content (e.g. traffic congestion, weather condition, stock market quotes) and mapping it into a single, usually one-dimensional spectrum (e.g. angle, colour). According to one of the concept originators David L. Rose this way the data is represented to an end user seamlessly, and its procurement requires an insignificant amount of cognitive load.
+The key issue lies within \textbf{taking Internet-based content} (e.g. traffic congestion, weather condition, stock market quotes) \textbf{and mapping it into a single, usually one-dimensional spectrum} (e.g. angle, colour). According to one of the concept originators David L. Rose this way the data is represented to an end user seamlessly, and its procurement requires an insignificant amount of cognitive load.
 
 One of the examples of the ambient device technology is Ambient Orb, introduced by Ambient Devices in 2002 (KIRSNER, 2002). The device itself was a glowing sphere which was continuously displaying data through perpetual changes in colour. Ambient Orb was customizable in terms of content and its subsequent visual representation. For instance, when the device was set to monitor a particular stock market index (e.g. NASDAQ), the Orb glowed green/red to represent the upward/downward movement of the stock prices; alternatively, it turned amber when the index is unchanged. Nabeel Hyatt stated that the device was marketed as an interior design item with additional functionality.
 

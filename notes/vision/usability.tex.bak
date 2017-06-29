@@ -46,21 +46,17 @@ Parmi tous les principes deux sont sp\'ecialement important: les utilisateurs so
 
 1. Les principes sont partiellement contradictoires
 
-Montrer toutes les
-optiosn possibles
-Minimiser
-l’information à
-l’écran
-Montrer toutes les options
-probablement intéressantes
+Montrer toutes les options possibles.
+Minimiser l'information \`a l'\'ecran.
+Montrer toutes les options probablement int\'eressantes
 
-2. Les principes ne sont pas des solutions
+2. Les principes ne sont pas des solutions.
 
-Pour rédiger un bon résumé, il faut qu’il...
-soit bref mais capture les points importants
-soit général mais fournisse quelques détails
-soit objectif mais doté d’un certain caractère
-révèle l’essentiel mais donne envir de lire
+Pour r\'ediger un bon r\'esum\'e, il faut qu'il...\\
+soit bref mais capture les points importants\\
+soit g\'en\'eral mais fournisse quelques d\'etails\\
+soit objectif mais dot\'e d'un certain caract\`ere\\
+r\'ev\`ele l'essentiel mais donne envie de lire\\
 ...
 
 \subsubsection{La solution}
@@ -171,7 +167,12 @@ Find out which are:
 \item The experience was carried out within subjects since every team experimented the use or not of the new software.
 \end{itemize}
 
-
+\begin{figure}[H]
+\centering
+\makebox[\textwidth][c]{
+\includegraphics[scale=0.55]{./images/exercise4.png}
+}
+\end{figure}
 
 
 
